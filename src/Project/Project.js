@@ -12,13 +12,15 @@ const project = ( props ) => {
           alt={ props.title }
         />
       </div>
-      <h2>{ props.title }</h2>
-      <hr />
-      <div><ReactMarkdown source={ props.subtitle} /></div>
-      <div>
-        <button
-          id={ props.id }
-          onClick={ props.clickHandler }>DETAILS</button>
+      <div className="card-details">
+        <h2>{ props.title }</h2>
+        <hr />
+        <div><ReactMarkdown source={ props.subtitle} /></div>
+        <div>
+          <button
+            id={ props.id }
+            onClick={ props.clickHandler }>DETAILS</button>
+        </div>
       </div>
     </div>
 }

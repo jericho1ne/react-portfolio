@@ -14,10 +14,7 @@ import './App.scss';
 // Get external project list
 import projectData from './assets/projectData.json';
 
-// for (var i=0; i < projectData.length; i++) {
-//   console.log(projectData[i].media.thumb)
-// }
-
+// Build container of image assets
 const projectImages = require.context('./assets/projects', true);
 
 
@@ -74,6 +71,26 @@ class App extends Component {
   }
 
   render() {
+    let projectImages = this.state.images;
+    // Save `this` keyword as something else... (#FML)
+    let rootApp = this;
+
+    var projectList = this.state.projects.map(function(project) {
+      return (
+        <Project
+          key={ project.id }
+          id={ project.id }
+          title={ project.title }
+          type={ project.type }
+          subtitle={ project.subtitle }
+          thumb={ projectImages(`./${project.media.thumb}`) }
+          images={ project.media.images}
+          tech={ project.tech }
+          clickHandler={ event => rootApp.showProjectDetails(event.target.id) }
+        />
+      );
+    });
+
     return (
       <div className="App">
         <header className="App-header">
@@ -86,36 +103,8 @@ class App extends Component {
 
         </header>
         <content>
-          <div className="project__list">
-            <Project
-              id={ this.state.projects[0].id }
-              title={ this.state.projects[0].title }
-              type={ this.state.projects[0].type }
-              subtitle={ this.state.projects[0].subtitle }
-              thumb={ this.state.images(`./${this.state.projects[0].media.thumb}`) }
-              images={ this.state.projects[0].media.images}
-              tech={ this.state.projects[0].tech }
-              clickHandler={ event => this.showProjectDetails(event.target.id) }
-              description="Blah..."
-            />
-            <Project
-              id={this.state.projects[1].id}
-              title={this.state.projects[1].title}
-              type={this.state.projects[1].type}
-              subtitle={this.state.projects[1].subtitle}
-              tech={this.state.projects[1].tech}
-              clickHandler={ event => this.showProjectDetails(event.target.id) }
-              description="Blah..."
-            />
-            <Project
-              id={this.state.projects[2].id}
-              title={this.state.projects[2].title}
-              type={this.state.projects[2].type}
-              subtitle={this.state.projects[2].subtitle}
-              tech={this.state.projects[2].tech}
-              clickHandler={ event => this.showProjectDetails(event.target.id) }
-              description="Blah..."
-            />
+          <div className="project__cards">
+           { projectList }
           </div>
         </content>
       </div>

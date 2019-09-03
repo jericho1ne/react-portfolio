@@ -23,9 +23,10 @@
     color: #61dafb;
   }
 
-  .project__list {
+  .project__cards {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
