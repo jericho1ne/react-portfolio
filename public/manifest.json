@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Mihai Peteu – Portfolio",
+  "name": "Los Angeles-based Software Designer/Developer specializing in Vue.js, React, and Node",
   "icons": [
     {
       "src": "favicon.ico",
@@ -16,7 +16,7 @@
       "src": "logo512.png",
       "type": "image/png",
       "sizes": "512x512"
-    }	    
+    }
   ],
   "start_url": ".",
   "display": "standalone",

@@ -1,27 +1,24 @@
-// useState helps us turn App.js into a functional component yet still
-// lets us access State
 import React, { Component, useState } from 'react';
 
 // Import images
-import logo from './assets/logo.svg';
-
+// import logo from './assets/logo.svg';
 
 // Components and related
-import Project from './Project/Project'
+import Project from '../Project/Project'
 import './App.scss';
 
-
-// Get external project list
-import projectData from './assets/projectData.json';
+// Get external project list and personal links
+import projectData from '../../assets/projectData.json';
+import linkData from '../../assets/links.json';
 
 // Build container of image assets
-const projectImages = require.context('./assets/projects', true);
-
+const projectImages = require.context('../../assets/projects', true);
 
 class App extends Component {
   state = {
     viewState: 'projects',
     projects: projectData,
+    links: linkData,
     images: projectImages,
   }
 
@@ -91,14 +88,26 @@ class App extends Component {
       );
     });
 
+    var linkButtons = this.state.links.map(function(link) {
+      return (
+        <a className="button"
+          key={ link.id }
+          href={ link.url }
+        >{ link.title }</a>
+      );
+    });
+
+    // <img src={logo} className="App-logo" alt="logo" />
+
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-
-          <div className="project__header">
-            <button onClick={() => this.changeView('projects')}>Projects</button>
-            <button onClick={() => this.changeView('resume')}>Resume</button>
+        <header className="header">
+          <h2 class="cover-heading">Hello.</h2>
+          <p class="subtitle">
+            I am a full stack developer, cyclist and <a href="https://findsomecoffee.com/">artisanal coffee</a> enthusiast. Founder at <a href="https://lowtidedigital.com/">Low Tide Digital</a> & <a href="http://envueplatform.com">Envue</a>.
+          </p>
+          <div className="header__links">
+            { linkButtons }
           </div>
 
         </header>

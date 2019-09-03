@@ -13,7 +13,7 @@ const project = ( props ) => {
         />
       </div>
       <div className="card-details">
-        <h2>{ props.title }</h2>
+        <h2 className="card-title">{ props.title }</h2>
         <hr />
         <div><ReactMarkdown source={ props.subtitle} /></div>
         <div>
