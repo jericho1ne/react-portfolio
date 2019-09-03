@@ -8,7 +8,7 @@ const project = ( props ) => {
   return <div className="project-card">
       <div className="card-img-top">
         <img className="card-img-top"
-          src={`./assets/${props.thumb}`}
+          src={`${props.thumb}`}
           alt={ props.title }
         />
       </div>

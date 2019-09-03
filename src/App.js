@@ -14,20 +14,18 @@ import './App.scss';
 // Get external project list
 import projectData from './assets/projectData.json';
 
-for (var i=0; i < projectData.length; i++) {
-  console.log(projectData[i].media.thumb)
-}
+// for (var i=0; i < projectData.length; i++) {
+//   console.log(projectData[i].media.thumb)
+// }
 
-const images = require.context('./assets/projects', true);
-
-
-debugger;
+const projectImages = require.context('./assets/projects', true);
 
 
 class App extends Component {
   state = {
     viewState: 'projects',
     projects: projectData,
+    images: projectImages,
   }
 
   setViewState = () => {
@@ -48,8 +46,6 @@ class App extends Component {
   // [ viewState, setViewState ] = useState({
   //   viewState: 'some new value'
   // })
-
-
 
   /**
    *  Actions
@@ -92,13 +88,13 @@ class App extends Component {
         <content>
           <div className="project__list">
             <Project
-              id={this.state.projects[0].id}
-              title={this.state.projects[0].title}
-              type={this.state.projects[0].type}
-              subtitle={this.state.projects[0].subtitle}
-              thumb={this.state.projects[0].media.thumb}
-              images={this.state.projects[0].media.images}
-              tech={this.state.projects[0].tech}
+              id={ this.state.projects[0].id }
+              title={ this.state.projects[0].title }
+              type={ this.state.projects[0].type }
+              subtitle={ this.state.projects[0].subtitle }
+              thumb={ this.state.images(`./${this.state.projects[0].media.thumb}`) }
+              images={ this.state.projects[0].media.images}
+              tech={ this.state.projects[0].tech }
               clickHandler={ event => this.showProjectDetails(event.target.id) }
               description="Blah..."
             />
