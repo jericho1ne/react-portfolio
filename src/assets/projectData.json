@@ -1,5 +1,21 @@
 [
   {
+    "id": 0,
+    "slug": "open-learning-ui-kit",
+    "title": "McGraw Hill UI Library",
+    "type": "web",
+    "subtitle": "UI component library which bridged the gap between UX and developer teams at McGraw Hill.",
+    "tech": "GitHub, GH Pages, npm, scss",
+    "detail": "",
+    "button": "Video",
+    "link": "https://vimeo.com/jericho1ne/open-learning-styleguide",
+    "media": {
+      "thumb": "find-some-coffee.jpg",
+      "images": [],
+      "video": []
+    }
+  },
+  {
     "id": 1,
     "slug": "find-some-coffee",
     "title": "Find Some Coffee",
