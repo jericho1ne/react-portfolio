@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
 
 // Import images
 // import logo from './assets/logo.svg';
@@ -23,10 +23,10 @@ class App extends Component {
   }
 
   setViewState = () => {
-    useState({
-      viewState: 'some new value',
-      projects: projectData,
-    })
+    // useState({
+    //   viewState: 'some new value',
+    //   projects: projectData,
+    // })
   }
 
 // const App = props => {
@@ -63,8 +63,10 @@ class App extends Component {
     window.viewState = this.state.viewState;
   }
 
-  showProjectDetails = (id) => {
-    console.warn(`showProjectDetails( ${id} )`);
+  getProject = (id) => {
+    console.warn(`getProject( ${id} )`);
+    const result = this.state.projects.filter(item => item.id === parseInt(id));
+    console.warn(result);
   }
 
   render() {
@@ -83,7 +85,7 @@ class App extends Component {
           thumb={ projectImages(`./${project.media.thumb}`) }
           images={ project.media.images}
           tech={ project.tech }
-          clickHandler={ event => rootApp.showProjectDetails(event.target.id) }
+          clickHandler={ event => rootApp.getProject(event.target.id) }
         />
       );
     });
@@ -102,8 +104,8 @@ class App extends Component {
     return (
       <div className="App">
         <header className="header">
-          <h2 class="cover-heading">Hello.</h2>
-          <p class="subtitle">
+          <h2 className="cover-heading">Hello.</h2>
+          <p className="subtitle">
             I am a full stack developer, cyclist and <a href="https://findsomecoffee.com/">artisanal coffee</a> enthusiast. Founder at <a href="https://lowtidedigital.com/">Low Tide Digital</a> & <a href="http://envueplatform.com">Envue</a>.
           </p>
           <div className="header__links">

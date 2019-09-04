@@ -71,7 +71,7 @@
     "title": "Middle of June",
     "type": "website",
     "subtitle": "A live music aggregator with which searches for detailed artist info and video clips on the fly.",
-    "2": "Javascript/jQuery, PHP, MySQL",
+    "tech": "Javascript/jQuery, PHP, MySQL",
     "detail": "",
     "button": "Website",
     "link": "http://middleofjune.com",

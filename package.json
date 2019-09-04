@@ -11,6 +11,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "serve": "npm run start",
     "build": "react-scripts build",
     "deploy": "npm run build && firebase deploy",
     "test": "react-scripts test",
@@ -30,5 +31,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-plugin-react-hooks": "^2.0.1"
   }
 }
