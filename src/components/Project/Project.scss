@@ -4,6 +4,16 @@
 .project-card {
   flex-grow: 1;
   flex-basis: auto;
+  transition: all 0.25s ease-out;
+  border: 1px solid #eee;
+  border-color: lighten($gray-dark, 12);
+  border-radius: 0.25rem;
+  padding: 0;
+  margin: 1rem 1rem;
+  height: auto;
+  overflow: hidden;
+  box-shadow: 0.5rem 0.5rem 1.65rem rgba(0, 0, 0, 0.35);
+  line-height: 1.5;
 
   @include mq(phones) {
     flex-basis: 100%;
@@ -24,23 +34,32 @@
     flex-basis: 22%;
   }
 
-  // width: 30%;
-  border: 1px solid #eee;
-  border-color: lighten($gray-dark, 12);
-  border-radius: 0.25rem;
-  padding: 0;
-  margin: 1rem 1rem;
-  height: auto;
-  overflow: hidden;
-  box-shadow: 0.5rem 0.5rem 1.65rem rgba(0, 0, 0, 0.35);
-  line-height: 1.5;
+  &.project-fixed {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    margin: 0;
+    border: none;
+
+    img {
+      filter: blur(2px);
+    }
+  }
 
   .card-img-top {
     width: 100%;
+
+    img {
+      width: 100%;
+      // border-bottom: 1px solid $color-tertiary;
+      box-shadow: 0 10px 25px -5px #ccc;
+    }
   }
 
   .card-details {
     padding: 1.5rem;
+    // box-shadow: 0 -5px 5px -5px #333;
 
     .card-title {
       font-size: 1.65rem;
