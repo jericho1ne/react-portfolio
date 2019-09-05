@@ -69,6 +69,13 @@ class App extends Component {
     console.warn(result);
   }
 
+  addClass() {
+    this.divRef.current.classList.add('main-div')
+  }
+  removeClass() {
+    this.divRef.current.classList.remove('main-div')
+  }
+
   render() {
     let projectImages = this.state.images;
     // Save `this` keyword as something else... (#FML)

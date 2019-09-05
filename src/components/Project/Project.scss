@@ -1,15 +1,16 @@
 @import '../../sass/_mixins';
 @import '../../sass/_colors';
 
+$card-margin: 2rem;
+
 .project-card {
   flex-grow: 1;
   flex-basis: auto;
   transition: all 0.25s ease-out;
-  border: 1px solid #eee;
-  border-color: lighten($gray-dark, 12);
+  border: 1px solid lighten($gray-dark, 50);
   border-radius: 0.25rem;
   padding: 0;
-  margin: 1rem 1rem;
+  margin: 2rem 1rem;
   height: auto;
   overflow: hidden;
   box-shadow: 0.5rem 0.5rem 1.65rem rgba(0, 0, 0, 0.35);
@@ -22,16 +23,16 @@
     flex-basis: 100%;
 	}
 	@include mq(tabletp) {
-    flex-basis: 40%;
+    flex-basis: calc(50vw - #{$card-margin});
   }
 	@include mq(tabletl) {
-    flex-basis: 30%;
+    flex-basis: calc(33vw - #{$card-margin});
 	}
 	@include mq(laptop) {
-    flex-basis: 24%;
+    flex-basis: calc(25vw - #{$card-margin});
   }
   @include mq(desktop) {
-    flex-basis: 22%;
+    flex-basis: calc(23vw - #{$card-margin});
   }
 
   &.project-fixed {
@@ -53,7 +54,7 @@
     img {
       width: 100%;
       // border-bottom: 1px solid $color-tertiary;
-      box-shadow: 0 10px 25px -5px #ccc;
+      box-shadow: 0 10px 15px -5px #ddd;
     }
   }
 

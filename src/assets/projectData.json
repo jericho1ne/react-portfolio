@@ -5,7 +5,7 @@
     "title": "McGraw Hill UI Library",
     "type": "web",
     "subtitle": "UI component library which bridged the gap between UX and developer teams at McGraw Hill.",
-    "tech": "GitHub, GH Pages, npm, scss",
+    "tech": "GitHub Pages, npm, scss",
     "detail": "",
     "button": "Video",
     "link": "https://vimeo.com/jericho1ne/open-learning-styleguide",
@@ -17,6 +17,22 @@
   },
   {
     "id": 1,
+    "slug": "envue-platform",
+    "title": "Envue Platform",
+    "type": "web",
+    "subtitle": "SEO-focused hosting platform for small businesses.",
+    "tech": "Jekyll, SnipCart, GCP, Google Search Console",
+    "detail": "",
+    "button": "Website",
+    "link": "http://envueplatform.com",
+    "media": {
+      "thumb": "envue-seo-platform.jpg",
+      "images": [],
+      "video": []
+    }
+  },
+  {
+    "id": 3,
     "slug": "find-some-coffee",
     "title": "Find Some Coffee",
     "type": "mobile",
@@ -32,7 +48,7 @@
     }
   },
   {
-    "id": 2,
+    "id": 7,
     "slug": "starterkit-media",
     "title": "StarterKit Media",
     "type": "website",
@@ -48,7 +64,7 @@
     }
   },
   {
-    "id": 3,
+    "id": 6,
     "slug": "fifa-gate",
     "title": "FIFA Gate Data Viz",
     "type": "dataviz",
@@ -65,7 +81,7 @@
     }
   },
   {
-    "id": 4,
+    "id": 10,
     "slug": "mapping-live-music",
     "title": "Tracking Live Music Venues",
     "type": "dataviz",
@@ -82,7 +98,7 @@
     }
   },
   {
-    "id": 5,
+    "id": 8,
     "slug": "middle-of-june",
     "title": "Middle of June",
     "type": "website",
@@ -98,7 +114,7 @@
     }
   },
   {
-    "id": 6,
+    "id": 15,
     "slug": "waterbowl-mobile-app",
     "title": "Waterbowl",
     "type": "mobile",
@@ -118,7 +134,7 @@
   },
 
   {
-    "id": 8,
+    "id": 20,
     "slug": "law-office",
     "title": "Law Offices of Gail Dulay",
     "type": "website",
