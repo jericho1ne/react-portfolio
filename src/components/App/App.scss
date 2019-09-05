@@ -80,11 +80,11 @@ p {
 }
 
 a {
-  color: $color-primary;
+  color: darken($color-primary, 30);
 
   &:hover,
   &:visited {
-    color: $color-primary;
+    color: darken($color-primary, 10);
   }
 }
 

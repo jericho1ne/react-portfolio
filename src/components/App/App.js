@@ -57,8 +57,7 @@ class App extends Component {
     console.warn(`getProject( ${id} )`);
 
     // Grab detailed info on the requested project
-    const result = this.state.projects.filter(item => item.id === parseInt(id));
-    console.warn(result);
+    // const result = this.state.projects.filter(item => item.id === parseInt(id));
 
     // If state is currently blank, then we need to display the requested project.
     // Else, something is currently displayed, so close the fullscreen modal.
@@ -66,13 +65,13 @@ class App extends Component {
       this.setState({
         projectInFocus: parseInt(id)
       }, () => {
-        console.log(this.state)
+        // console.log(this.state)
       })
     } else {
       this.setState({
         projectInFocus: ''
       }, () => {
-        console.log(this.state)
+        // console.log(this.state)
       })
     }
 
@@ -108,6 +107,7 @@ class App extends Component {
           title={ project.title }
           type={ project.type }
           subtitle={ project.subtitle }
+          detail={ project.detail }
           thumb={ projectImages(`./${project.media.thumb}`) }
           images={ project.media.images}
           tech={ project.tech }

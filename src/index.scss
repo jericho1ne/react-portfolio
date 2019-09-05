@@ -10,7 +10,17 @@ code {
     monospace;
 }
 
+
+// Helper classes
+
+.d-none {
+  display: none;
+  visibility: hidden;
+}
+
 .lock-scroll {
   overflow-x: scroll;
   overflow-y: hidden;
 }
+
+

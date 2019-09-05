@@ -6,8 +6,11 @@ $card-margin: 1rem;
 .project-card {
   flex-grow: 1;
   flex-basis: auto;
-
-  transition: height 0.25s ease-out, width 1.25s ease-out;
+  width: auto;
+  // transform: scale(1.0);
+  // transition: filter 1s ease-in;
+  // height 0.25s ease-out, width 1.25s ease-out, padding 0.5 ease-out, margin 0.8s linear;
+  // transition: all 1s linear;
 
   border: 1px solid lighten($gray-dark, 50);
   border-radius: 0.25rem;
@@ -38,49 +41,37 @@ $card-margin: 1rem;
     flex-basis: calc(23vw - #{$card-margin});
   }
 
-  &.project-focus {
-    z-index: 10;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    margin: 0;
-    border: none;
-    border-radius: 0;
-
-    .card-img-top {
-      height: 40vh;
-      display: inline-block;
-      overflow: hidden;
-
-      img {
-        filter: blur(2px);
-        height: auto;
-        width: 100%;
-      }
-    }
-
-    .card-details {
-      padding: 0 4rem;
-    }
-  }
-
   .card-img-top {
     width: 100%;
 
     img {
+      transition: all 0.8s ease-out;
+      // transition: 1s all linear;
+      // -webkit-transition: 1s -webkit-all linear;
+      // -moz-transition: 1s -moz-all linear;
+      // -ms-transition: 1s -ms-all linear;
+      // -o-transition: 1s -o-all linear;
+
+      filter: blur(0px);
       width: 100%;
+      height: auto;
       box-shadow: 0 10px 15px -5px #ddd;
+    }
+  }
+
+  .card-title {
+    h2 {
+      transition: all 0.35s ease-out;
+      font-size: 1.65rem;
+      margin: 2rem 0 0 0;
+      color: #333;
     }
   }
 
   .card-details {
     padding: 1.5rem;
 
-    .card-title {
-      font-size: 1.65rem;
-      color: #333;
-    }
+
     .card-tech {
       font-weight: bold;
       padding: .6rem 0;
@@ -96,5 +87,55 @@ $card-margin: 1rem;
   .card-tech {
     font-size: 0.8rem;
     color: $gray-dark;
+  }
+}
+
+
+// When displayed Project expands to fill screen.
+.project-card.project-focus {
+  position: fixed;
+  display: block;
+  // transform: scale(1.5);
+  top: 0;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+
+  .card-img-top {
+    height: 35vh;
+    display: inline-block;
+    overflow: hidden;
+
+    img {
+      filter: blur(3px);
+      height: auto;
+      width: 100%;
+      border-bottom: 2px solid #333;
+    }
+  }
+
+  .card-title {
+    text-align: center;
+
+    h2 {
+      position: absolute;
+      top: 15vh;
+      width: 100%;
+      margin: 0 auto;
+      font-size: 1.7rem;
+      text-align: center;
+      opacity: 0.9;
+      color: #fff;
+      letter-spacing: 0.05rem;
+      text-shadow: 0.1rem 0.05rem 0.09rem rgba(0, 0, 0, 0.9);
+    }
+  }
+
+  .card-details {
+    padding: 1rem 3rem;
+    height: 65vh;
   }
 }

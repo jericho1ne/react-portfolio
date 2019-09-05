@@ -35,10 +35,11 @@ const Project = ( props ) => {
           alt={ props.title }
         />
       </div>
+      <div className="card-title"><h2>{ props.title }</h2></div>
       <div className="card-details">
-        <h2 className="card-title">{ props.title }</h2>
         <div className="card-tech">{ tagsList }</div>
         <div className="card-subtitle"><ReactMarkdown source={ props.subtitle} /></div>
+        <div className={` ${(!props.inFocus ? 'd-none' : '')}`}><ReactMarkdown source={ props.detail } /></div>
         <div>
           <button
             id={ props.id }
