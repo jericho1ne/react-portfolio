@@ -20,26 +20,8 @@ class App extends Component {
     projects: projectData,
     links: linkData,
     images: projectImages,
+    projectInFocus: '',
   }
-
-  setViewState = () => {
-    // useState({
-    //   viewState: 'some new value',
-    //   projects: projectData,
-    // })
-  }
-
-// const App = props => {
-  /**
-   *  State setters
-   **/
-  // [ projectState, setProjectState ] = useState({
-  //   projects: projectData,
-  // })
-
-  // [ viewState, setViewState ] = useState({
-  //   viewState: 'some new value'
-  // })
 
   /**
    *  Actions
@@ -51,6 +33,9 @@ class App extends Component {
   //   window.projectState = this.state.projects;
   // }
 
+  /**
+   *
+   */
   changeView = (viewName) => {
     console.warn(`changeView() called: ${viewName}`);
 
@@ -63,23 +48,57 @@ class App extends Component {
     window.viewState = this.state.viewState;
   }
 
-  getProject = (id) => {
+  /**
+   * Updates state of currently shown project.
+   * Example of State changes: '' -> 3 -> '' -> 2
+   * (always should be toggled back to blank)
+   */
+  toggleProject = (id) => {
     console.warn(`getProject( ${id} )`);
+
+    // Grab detailed info on the requested project
     const result = this.state.projects.filter(item => item.id === parseInt(id));
     console.warn(result);
+
+    // If state is currently blank, then we need to display the requested project.
+    // Else, something is currently displayed, so close the fullscreen modal.
+    if (this.state.projectInFocus === '') {
+      this.setState({
+        projectInFocus: parseInt(id)
+      }, () => {
+        console.log(this.state)
+      })
+    } else {
+      this.setState({
+        projectInFocus: ''
+      }, () => {
+        console.log(this.state)
+      })
+    }
+
   }
 
-  addClass() {
-    this.divRef.current.classList.add('main-div')
+  /**
+   *
+   */
+  expandProject(parentCard) {
+    parentCard.classList.add('project-fixed')
   }
-  removeClass() {
-    this.divRef.current.classList.remove('main-div')
+
+  /**
+   *
+   */
+  shrinkProject(e) {
+    e.target.closest(".project-card").classList.remove('project-fixed')
   }
 
   render() {
     let projectImages = this.state.images;
     // Save `this` keyword as something else... (#FML)
     let rootApp = this;
+
+    // Lock body scroll if a project detail modal is showing
+    document.body.classList.toggle('lock-scroll', this.state.projectInFocus !== '')
 
     var projectList = this.state.projects.map(function(project) {
       return (
@@ -92,7 +111,8 @@ class App extends Component {
           thumb={ projectImages(`./${project.media.thumb}`) }
           images={ project.media.images}
           tech={ project.tech }
-          clickHandler={ event => rootApp.getProject(event.target.id) }
+          inFocus= { (rootApp.state.projectInFocus === project.id ? true : false) }
+          clickHandler={ event => rootApp.toggleProject(event.target.id) }
         />
       );
     });

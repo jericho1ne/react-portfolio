@@ -2,13 +2,12 @@
 @import '../../sass/_colors';
 
 .project-tag {
-  flex-grow: 1;
-  flex-basis: auto;
+  display: inline-block;
   color: $color-tertiary;
   border: 1px solid $color-tertiary;
   border-radius: 0.25rem;
   padding: 0.25rem 0.5rem;
   margin-right: .35rem;
   height: auto;
-  line-height: 1.5;
+  line-height: 1;
 }

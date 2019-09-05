@@ -2,16 +2,22 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 
 import './Project.scss';
-
 import Tag from '../Tag/Tag'
 
-
 // same as filename but should be lowercase
-const project = ( props ) => {
+const Project = ( props ) => {
+  // const setViewState = () => {
+    // useState({
+    //   viewState: 'some new value',
+    //   projects: projectData,
+    // })
+  // }
+
   // Get list of tech used in project, turn it into individual Tags
   const tags = props.tech.split(",").map(function(item) {
     return item.trim();
   });
+
   const tagsList = tags.map(function(tag, index) {
     return (
       <Tag
@@ -22,7 +28,7 @@ const project = ( props ) => {
   });
 
   return (
-    <div className="project-card">
+    <div className={`project-card ${(props.inFocus ? 'project-focus' : '')}`}>
       <div className="card-img-top">
         <img className=""
           src={ props.thumb }
@@ -36,11 +42,11 @@ const project = ( props ) => {
         <div>
           <button
             id={ props.id }
-            onClick={ props.clickHandler }>DETAILS</button>
+            onClick={ props.clickHandler }>{ (!props.inFocus ? 'DETAILS' : 'CLOSE') }</button>
         </div>
       </div>
     </div>
   )
 }
 
-export default project
+export default Project
