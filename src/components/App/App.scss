@@ -44,6 +44,19 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @include mq(phones) {
+      padding: .5rem;
+    }
+    @include mq(phonel) {
+      padding: 1rem;
+    }
+    @include mq(tabletp) {
+      padding: 2rem;
+    }
+    @include mq(tabletl) {
+      padding: 2.5rem;
+    }
   }
 
   .cover-heading {
@@ -59,7 +72,27 @@
   }
 }
 
+$anim-delay: 0.35s;
 
+.content-overlay {
+  z-index: 1;
+  height: 10vh;
+  top: 35%;
+  opacity: 0;
+  visibility: hidden;
+  margin: auto 0;
+  width: 100%;
+  position: fixed;
+  background: #fff;
+  transition: all $anim-delay ease-out;
+
+  &.show {
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+    height: 80vh;
+  }
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

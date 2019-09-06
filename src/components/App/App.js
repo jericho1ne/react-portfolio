@@ -24,17 +24,7 @@ class App extends Component {
   }
 
   /**
-   *  Actions
-   **/
-  // useEffect = () => {
-  //   // https://reactjs.org/docs/hooks-effect.html
-  //   console.log(`*** useEffect triggered ***`)
-  //   window.viewState = this.state.viewState;
-  //   window.projectState = this.state.projects;
-  // }
-
-  /**
-   *
+   * Toggle currently content view
    */
   changeView = (viewName) => {
     console.warn(`changeView() called: ${viewName}`);
@@ -57,52 +47,29 @@ class App extends Component {
     console.warn(`getProject( ${id} )`);
 
     // Grab detailed info on the requested project
-    // const result = this.state.projects.filter(item => item.id === parseInt(id));
+    // const result = this.state.projects.filter(item => item.id === id);
 
     // If state is currently blank, then we need to display the requested project.
     // Else, something is currently displayed, so close the fullscreen modal.
-    if (this.state.projectInFocus === '') {
-      this.setState({
-        projectInFocus: parseInt(id)
-      }, () => {
-        // console.log(this.state)
-      })
-    } else {
-      this.setState({
-        projectInFocus: ''
-      }, () => {
-        // console.log(this.state)
-      })
-    }
 
-  }
+    const projectInFocus = this.state.projectInFocus
+      ? ''
+      : id;
 
-  /**
-   *
-   */
-  expandProject(parentCard) {
-    parentCard.classList.add('project-fixed')
-  }
-
-  /**
-   *
-   */
-  shrinkProject(e) {
-    e.target.closest(".project-card").classList.remove('project-fixed')
+    this.setState({ projectInFocus }, () => { /* console.log(this.state) */ })
   }
 
   render() {
+    // Grab images separately; we'll need to create file resources later
     let projectImages = this.state.images;
-    // Save `this` keyword as something else... (#FML)
-    let rootApp = this;
 
     // Lock body scroll if a project detail modal is showing
     document.body.classList.toggle('lock-scroll', this.state.projectInFocus !== '')
 
-    var projectList = this.state.projects.map(function(project) {
+    var projectList = this.state.projects.map((project, index) => {
       return (
         <Project
-          key={ project.id }
+          key={ index }
           id={ project.id }
           title={ project.title }
           type={ project.type }
@@ -111,8 +78,8 @@ class App extends Component {
           thumb={ projectImages(`./${project.media.thumb}`) }
           images={ project.media.images}
           tech={ project.tech }
-          inFocus= { (rootApp.state.projectInFocus === project.id ? true : false) }
-          clickHandler={ event => rootApp.toggleProject(event.target.id) }
+          inFocus= { (this.state.projectInFocus === project.id) }
+          clickHandler={ event => this.toggleProject(event.target.id) }
         />
       );
     });
@@ -133,7 +100,7 @@ class App extends Component {
         <header className="header">
           <h2 className="cover-heading">Hello.</h2>
           <p className="subtitle">
-            I am a full stack developer, cyclist and <a href="https://findsomecoffee.com/">artisanal coffee</a> enthusiast. Founder at <a href="https://lowtidedigital.com/">Low Tide Digital</a> & <a href="http://envueplatform.com">Envue</a>.
+            I am a full stack developer, cyclist and coffee enthusiast. Founder of <a href="https://lowtidedigital.com/">Low Tide Digital</a> & <a href="http://envueplatform.com">Envue</a>.
           </p>
           <div className="header__links">
             { linkButtons }
@@ -141,6 +108,7 @@ class App extends Component {
 
         </header>
         <content>
+          <div className={`content-overlay ${(this.state.projectInFocus !== '' ? 'show' : '' )}`}></div>
           <div className="project__cards">
            { projectList }
           </div>

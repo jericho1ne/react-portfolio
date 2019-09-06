@@ -6,13 +6,6 @@ import Tag from '../Tag/Tag'
 
 // same as filename but should be lowercase
 const Project = ( props ) => {
-  // const setViewState = () => {
-    // useState({
-    //   viewState: 'some new value',
-    //   projects: projectData,
-    // })
-  // }
-
   // Get list of tech used in project, turn it into individual Tags
   const tags = props.tech.split(",").map(function(item) {
     return item.trim();
@@ -28,7 +21,8 @@ const Project = ( props ) => {
   });
 
   return (
-    <div className={`project-card ${(props.inFocus ? 'project-focus' : '')}`}>
+    <div className={`project-card ${(props.inFocus ? 'project-focus' : '')}`}
+      style={{ opacity: props.opacity }} >
       <div className="card-img-top">
         <img className=""
           src={ props.thumb }
