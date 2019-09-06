@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 
 // Components and related
 import Project from '../Project/Project'
+import Header from '../Header/Header'
 import './App.scss';
 
 // Get external project list and personal links
@@ -49,14 +50,13 @@ class App extends Component {
     // Grab detailed info on the requested project
     // const result = this.state.projects.filter(item => item.id === id);
 
-    // If state is currently blank, then we need to display the requested project.
-    // Else, something is currently displayed, so close the fullscreen modal.
-
+    // Determine whether to display the requested project.
+    // Else, close the fullscreen modal.
     const projectInFocus = this.state.projectInFocus
       ? ''
       : id;
 
-    this.setState({ projectInFocus }, () => { /* console.log(this.state) */ })
+    this.setState({ projectInFocus }, () => { })
   }
 
   render() {
@@ -84,29 +84,9 @@ class App extends Component {
       );
     });
 
-    var linkButtons = this.state.links.map(function(link) {
-      return (
-        <a className="button"
-          key={ link.id }
-          href={ link.url }
-        >{ link.title }</a>
-      );
-    });
-
-    // <img src={logo} className="App-logo" alt="logo" />
-
     return (
       <div className="App">
-        <header className="header">
-          <h2 className="cover-heading">Hello.</h2>
-          <p className="subtitle">
-            I am a full stack developer, cyclist and coffee enthusiast. Founder of <a href="https://lowtidedigital.com/">Low Tide Digital</a> & <a href="http://envueplatform.com">Envue</a>.
-          </p>
-          <div className="header__links">
-            { linkButtons }
-          </div>
-
-        </header>
+        <Header links={ this.state.links } />
         <content>
           <div className={`content-overlay ${(this.state.projectInFocus !== '' ? 'show' : '' )}`}></div>
           <div className="project__cards">
