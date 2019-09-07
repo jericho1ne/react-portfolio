@@ -59,6 +59,27 @@ class App extends Component {
     this.setState({ projectInFocus }, () => { })
   }
 
+  escTriggered = (event) => {
+    if (event.keyCode === 27 && this.state.projectInFocus !== '') {
+      console.log(' *** escapeTriggered ***')
+      this.setState({ projectInFocus: '' }, () => { })
+    }
+  }
+
+  componentDidMount() {
+    console.log(' *** componentDidMount ***')
+    document.addEventListener('keydown', this.escTriggered, false);
+  }
+
+  componentWillUnmount() {
+    console.log(' *** componentDidMount ***')
+    document.addEventListener('keydown', this.escTriggered, false);
+  }
+
+  handleChange() {
+    console.log(' *** handleChange ***')
+  }
+
   render() {
     // Grab images separately; we'll need to create file resources later
     let projectImages = this.state.images;
@@ -78,7 +99,7 @@ class App extends Component {
           thumb={ projectImages(`./${project.media.thumb}`) }
           images={ project.media.images}
           tech={ project.tech }
-          inFocus= { (this.state.projectInFocus === project.id) }
+          inFocus={ (this.state.projectInFocus === project.id) }
           clickHandler={ event => this.toggleProject(event.target.id) }
         />
       );

@@ -24,6 +24,9 @@ const Project = ( props ) => {
     <div className={`project-card ${(props.inFocus ? 'project-focus' : '')}`}
       style={{ opacity: props.opacity }} >
       <div className="card-img-top">
+        { props.inFocus
+            ? <button className="float-right" id={ props.id } onClick={ props.clickHandler }>Close</button>
+            : '' }
         <img className=""
           src={ props.thumb }
           alt={ props.title }
@@ -35,9 +38,9 @@ const Project = ( props ) => {
         <div className="card-subtitle"><ReactMarkdown source={ props.subtitle} /></div>
         <div className={` ${(!props.inFocus ? 'd-none' : '')}`}><ReactMarkdown source={ props.detail } /></div>
         <div>
-          <button
-            id={ props.id }
-            onClick={ props.clickHandler }>{ (!props.inFocus ? 'DETAILS' : 'CLOSE') }</button>
+          { !props.inFocus
+              ? <button id={ props.id } onClick={ props.clickHandler }>Details</button>
+              : '' }
         </div>
       </div>
     </div>
