@@ -2,7 +2,7 @@
 @import '../../sass/_colors';
 
 header {
-    background-color: $color-tertiary;
+    background-color: darken($color-tertiary, 10);
     height: auto;
     padding: 2em 2em 1em 2em;
     display: flex;
@@ -13,9 +13,11 @@ header {
 
     button,
     a.button {
-      background-color: $color-tertiary;
+      background-color: transparent;
+      border-color: #fff;
       text-decoration: none;
-      padding: 0.5rem 1rem;
+      padding: .4rem .6rem;
+      margin: 0.2rem;
     }
     .header__links {
       padding: 2rem 0 1em 0;

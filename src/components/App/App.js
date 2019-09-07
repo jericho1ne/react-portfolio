@@ -19,7 +19,7 @@ class App extends Component {
   state = {
     viewState: 'projects',
     projects: projectData,
-    links: linkData,
+    links: linkData.slice(0, 3),
     images: projectImages,
     projectInFocus: '',
   }

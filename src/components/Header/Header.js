@@ -9,6 +9,8 @@ const Header = ( props ) => {
       <a className="button"
         key={ link.id }
         href={ link.url }
+        target="_blank"
+        rel="noopener noreferrer"
       >{ link.title }</a>
     );
   });
