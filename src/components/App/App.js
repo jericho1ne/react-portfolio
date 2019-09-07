@@ -96,9 +96,9 @@ class App extends Component {
           type={ project.type }
           subtitle={ project.subtitle }
           detail={ project.detail }
-          thumb={ projectImages(`./${project.media.thumb}`) }
-          images={ project.media.images}
+          thumb={ projectImages(`./${project.thumb}`) }
           tech={ project.tech }
+          media={ project.media }
           inFocus={ (this.state.projectInFocus === project.id) }
           clickHandler={ event => this.toggleProject(event.target.id) }
         />

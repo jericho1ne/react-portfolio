@@ -3,6 +3,8 @@ import ReactMarkdown from 'react-markdown';
 
 import './Project.scss';
 import Tag from '../Tag/Tag'
+import Multimedia from '../Multimedia/Multimedia'
+
 
 // same as filename but should be lowercase
 const Project = ( props ) => {
@@ -11,6 +13,7 @@ const Project = ( props ) => {
     return item.trim();
   });
 
+  // Built list of Tag components to be displayed
   const tagsList = tags.map(function(tag, index) {
     return (
       <Tag
@@ -37,11 +40,9 @@ const Project = ( props ) => {
         <div className="card-tech">{ tagsList }</div>
         <div className="card-subtitle"><ReactMarkdown source={ props.subtitle} /></div>
         <div className={` ${(!props.inFocus ? 'd-none' : '')}`}><ReactMarkdown source={ props.detail } /></div>
-        <div>
-          { !props.inFocus
-              ? <button id={ props.id } onClick={ props.clickHandler }>Details</button>
-              : '' }
-        </div>
+        { !props.inFocus
+            ? <button id={ props.id } onClick={ props.clickHandler }>Details</button>
+            : <Multimedia media={ props.media } /> }
       </div>
     </div>
   )

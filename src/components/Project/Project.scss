@@ -1,7 +1,7 @@
 @import '../../sass/_mixins';
 @import '../../sass/_colors';
 
-$card-margin: 2rem;
+$card-margin: 1rem;
 
 .project-card {
   flex-grow: 1;
@@ -105,7 +105,7 @@ $card-margin: 2rem;
   border: none;
   border-radius: 0;
   width: 100vw;
-  height: 100vh;
+  height: auto;
 
   .card-img-top {
     height: 25vh;
@@ -130,7 +130,7 @@ $card-margin: 2rem;
       top: 15vh;
       width: 100%;
       margin: 0 auto;
-      font-size: 1.7rem;
+      font-size: 1.4rem;
       text-align: center;
       opacity: 0.9;
       color: #fff;

@@ -2,7 +2,7 @@
 @import '../../sass/_colors';
 
 .App {
-  font-weight: 400;
+  font-weight: 200;
   text-align: center;
 
   .App-logo {
@@ -21,13 +21,13 @@
     justify-content: space-between;
 
     @include mq(phones) {
-      padding: .5rem;
+      padding: .3rem;
     }
     @include mq(phonel) {
-      padding: 1rem;
+      padding: .8rem;
     }
     @include mq(tabletp) {
-      padding: 2rem;
+      padding: 3rem;
     }
     @include mq(tabletl) {
       padding: 2.5rem;
@@ -88,11 +88,17 @@ p {
 }
 
 a {
-  color: darken($color-primary, 30);
+  color: darken($color-primary, 10);
+  font-weight: 400;
+  transition: all 0.25s ease-out;
 
-  &:hover,
   &:visited {
     color: darken($color-primary, 10);
+  }
+
+  &:hover,
+  &:active {
+    color: lighten($color-primary, 5);
   }
 }
 

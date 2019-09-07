@@ -1,0 +1,12 @@
+@import '../../sass/_mixins';
+@import '../../sass/_colors';
+
+.multimedia-container {
+  // border: 1px solid $color-accent;
+  height: 100%;
+  padding: 0.5rem 2rem;
+
+  iframe, .slider {
+    border: 1px solid #ddd;
+  }
+}
