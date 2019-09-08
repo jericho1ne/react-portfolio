@@ -43,7 +43,7 @@ class App extends Component {
    * (always should be toggled back to blank)
    */
   toggleProject = (id) => {
-    console.warn(`getProject( ${id} )`)
+    // console.warn(`getProject( ${id} )`)
 
     // Grab detailed info on the requested project
     // const result = this.state.projects.filter(item => item.id === id)
@@ -65,17 +65,11 @@ class App extends Component {
   }
 
   componentDidMount() {
-    console.log(' *** componentDidMount ***')
     document.addEventListener('keydown', this.escTriggered, false)
   }
 
   componentWillUnmount() {
-    console.log(' *** componentDidMount ***')
     document.addEventListener('keydown', this.escTriggered, false)
-  }
-
-  handleChange() {
-    console.log(' *** handleChange ***')
   }
 
   render() {
