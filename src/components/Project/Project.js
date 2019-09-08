@@ -37,7 +37,9 @@ const Project = ( props ) => {
       <div className="card-title"><h2>{ props.title }</h2></div>
       <div className="card-details">
         <div className="card-tech">{ tagsList }</div>
-        <div className="card-subtitle"><ReactMarkdown source={ props.subtitle} /></div>
+        { !props.inFocus
+            ? <div className="card-subtitle"><ReactMarkdown source={ props.subtitle} /></div>
+            : '' }
         <div className={` ${(!props.inFocus ? 'd-none' : '')}`}><ReactMarkdown source={ props.detail } /></div>
         { !props.inFocus
             ? <button onClick={ props.clickHandler }>Details</button>

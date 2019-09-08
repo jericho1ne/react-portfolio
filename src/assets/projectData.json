@@ -61,16 +61,16 @@
 
   {
     "id": "fifa-gate",
-    "title": "FIFA Gate Data Viz",
+    "title": "FIFA Gate Soccer Scandal",
     "type": "dataviz",
     "subtitle": "Visualization showcasing global corruption schemes via money flows between FIFA officials and co-conspirators.",
     "tech": "Springy.js, jQuery, Photoshop, Google Sheets",
-    "detail": " Icons represent each _Actor_ involved, Colors denote _Connection_ types, and Line types define actual vs planned _Payoffs_. Featured on USA Today's [Fields of Green](http://thefieldsofgreen.com/2015/06/19/fifa-infographic/). Collaborative project with [Rook Campbell, PhD](https://uscpublicdiplomacy.org/users/rook_campbell).",
+    "detail": " Icons represent each _Actor_ involved, Colors denote _Connection_ types, and Line types define actual vs planned _Payoffs_. Featured on USA Today's [Fields of Green](http://thefieldsofgreen.com/2015/06/19/fifa-infographic/). Collaborative project with [Rook Campbell, PhD](https://uscpublicdiplomacy.org/users/rook_campbell) - USC Center on Public Diplomacy.",
     "button": "Live Demo",
     "thumb": "fifa-gate.jpg",
     "media": {
       "link": "fifa-gate.html",
-      "embed": "<iframe src='http://mihaipet.eu/media/projects/visualization-fifagate' width='100%' height='700' frameborder='0' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>",
+      "embed": "<iframe src='http://mihaipeteu.com/media/projects/visualization-fifagate' width='100%' height='700' frameborder='0' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>",
       "images": []
     }
   },
