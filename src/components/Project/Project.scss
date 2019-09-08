@@ -43,11 +43,12 @@ $card-margin: 1rem;
 
   .card-img-top {
     background-color: #fff;
+    cursor: pointer;
     transition: background-color .4s ease-out;
     width: 100%;
 
     img {
-      transition: all 0.8s ease-out;
+      transition: filter 0.85s ease-out, opacity 0.3s ease-out  ;
       // transition: 1s all linear;
       // -webkit-transition: 1s -webkit-all linear;
       // -moz-transition: 1s -moz-all linear;
@@ -58,6 +59,10 @@ $card-margin: 1rem;
       width: 100%;
       height: auto;
       box-shadow: 0 8px 10px -2px #ddd;
+
+      &:hover {
+        opacity: 0.65;
+      }
     }
   }
 

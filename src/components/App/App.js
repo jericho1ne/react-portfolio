@@ -98,7 +98,7 @@ class App extends Component {
           tech={ project.tech }
           media={ project.media }
           inFocus={ (this.state.projectInFocus === project.id) }
-          clickHandler={ event => this.toggleProject(event.target.id) }
+          clickHandler={ event => this.toggleProject(project.id) }
         />
       )
     })
