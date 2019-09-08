@@ -1,5 +1,6 @@
-import React from 'react';
-import './Header.scss';
+import React from 'react'
+
+import './Header.scss'
 
 // same as filename but should be lowercase
 const Header = ( props ) => {
@@ -12,8 +13,8 @@ const Header = ( props ) => {
         target="_blank"
         rel="noopener noreferrer"
       >{ link.title }</a>
-    );
-  });
+    )
+  })
 
   return (
     <header className="header">

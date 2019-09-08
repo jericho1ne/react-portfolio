@@ -1,19 +1,17 @@
-import React, { Component } from 'react';
-
-// Import images
-// import logo from './assets/logo.svg';
-
-// Components and related
+// Libraries & Components
+import React, { Component } from 'react'
 import Project from '../Project/Project'
 import Header from '../Header/Header'
-import './App.scss';
 
-// Get external project list and personal links
-import projectData from '../../assets/projectData.json';
-import linkData from '../../assets/links.json';
+// Styles
+import './App.scss'
+
+// External data
+import projectData from '../../assets/projectData.json'
+import linkData from '../../assets/links.json'
 
 // Build container of image assets
-const projectImages = require.context('../../assets/projects', true);
+const projectImages = require.context('../../assets/projects', true)
 
 class App extends Component {
   state = {
@@ -28,15 +26,15 @@ class App extends Component {
    * Toggle currently content view
    */
   changeView = (viewName) => {
-    console.warn(`changeView() called: ${viewName}`);
+    console.warn(`changeView() called: ${viewName}`)
 
     // setState updates current component and all children
     this.setState({
       currentView: viewName
     })
 
-    window.projects = this.state.projects;
-    window.viewState = this.state.viewState;
+    window.projects = this.state.projects
+    window.viewState = this.state.viewState
   }
 
   /**
@@ -45,16 +43,16 @@ class App extends Component {
    * (always should be toggled back to blank)
    */
   toggleProject = (id) => {
-    console.warn(`getProject( ${id} )`);
+    console.warn(`getProject( ${id} )`)
 
     // Grab detailed info on the requested project
-    // const result = this.state.projects.filter(item => item.id === id);
+    // const result = this.state.projects.filter(item => item.id === id)
 
     // Determine whether to display the requested project.
     // Else, close the fullscreen modal.
     const projectInFocus = this.state.projectInFocus
       ? ''
-      : id;
+      : id
 
     this.setState({ projectInFocus }, () => { })
   }
@@ -68,12 +66,12 @@ class App extends Component {
 
   componentDidMount() {
     console.log(' *** componentDidMount ***')
-    document.addEventListener('keydown', this.escTriggered, false);
+    document.addEventListener('keydown', this.escTriggered, false)
   }
 
   componentWillUnmount() {
     console.log(' *** componentDidMount ***')
-    document.addEventListener('keydown', this.escTriggered, false);
+    document.addEventListener('keydown', this.escTriggered, false)
   }
 
   handleChange() {
@@ -81,8 +79,8 @@ class App extends Component {
   }
 
   render() {
-    // Grab images separately; we'll need to create file resources later
-    let projectImages = this.state.images;
+    // Grab images separately we'll need to create file resources later
+    let projectImages = this.state.images
 
     // Lock body scroll if a project detail modal is showing
     document.body.classList.toggle('lock-scroll', this.state.projectInFocus !== '')
@@ -102,8 +100,8 @@ class App extends Component {
           inFocus={ (this.state.projectInFocus === project.id) }
           clickHandler={ event => this.toggleProject(event.target.id) }
         />
-      );
-    });
+      )
+    })
 
     return (
       <div className="App">
@@ -119,4 +117,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App

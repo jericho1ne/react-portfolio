@@ -1,17 +1,16 @@
-import React from 'react';
-import ReactMarkdown from 'react-markdown';
-
-import './Project.scss';
+import React from 'react'
+import ReactMarkdown from 'react-markdown'
 import Tag from '../Tag/Tag'
 import Multimedia from '../Multimedia/Multimedia'
 
+import './Project.scss'
 
 // same as filename but should be lowercase
 const Project = ( props ) => {
   // Get list of tech used in project, turn it into individual Tags
   const tags = props.tech.split(",").map(function(item) {
-    return item.trim();
-  });
+    return item.trim()
+  })
 
   // Built list of Tag components to be displayed
   const tagsList = tags.map(function(tag, index) {
@@ -20,8 +19,8 @@ const Project = ( props ) => {
         key={ index }
         name={ tag }
       />
-    );
-  });
+    )
+  })
 
   return (
     <div className={`project-card ${(props.inFocus ? 'project-focus' : '')}`}

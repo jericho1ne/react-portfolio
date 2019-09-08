@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import './Tag.scss';
+import './Tag.scss'
 
 // same as filename but should be lowercase
 const Tag = ( props ) => {

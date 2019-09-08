@@ -47,8 +47,6 @@
   }
 }
 
-$anim-delay: 0.35s;
-
 .content-overlay {
   z-index: 1;
   height: 10vh;
@@ -59,7 +57,7 @@ $anim-delay: 0.35s;
   width: 100%;
   position: fixed;
   background: #fff;
-  transition: all $anim-delay ease-out;
+  transition: all 0.25s ease-out;
 
   &.show {
     visibility: visible;

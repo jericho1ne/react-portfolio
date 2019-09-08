@@ -92,11 +92,10 @@ $card-margin: 1rem;
   }
 }
 
-
 // When displayed Project expands to fill screen.
 .project-card.project-focus {
   z-index: 100;
-  animation-delay: .3s;
+  animation-delay: .2s;
   position: fixed;
   display: block;
   top: 0;
