@@ -3,8 +3,8 @@
 
 $card-margin: 1rem;
 
-$card-top-height: 30vh;
-$card-bottom-height: calc(100vh - #{$card-top-height});
+$card-top-height: 100px;
+$card-bottom-height: calc(100% - #{$card-top-height});
 
 .project-card {
   flex-grow: 1;
@@ -96,9 +96,16 @@ $card-bottom-height: calc(100vh - #{$card-top-height});
     color: $gray-dark;
   }
 
-  .tech,
-  .description {
-    padding: 0rem 4rem .8rem;
+  .tech {
+    @include mq(phones) {
+      padding: 0rem .5rem .8rem;
+    }
+    @include mq(phonel) {
+      padding: 0rem 1rem .8rem;
+    }
+    @include mq(tabletp) {
+      padding: 0rem 4rem .8rem;
+    }
   }
 }
 
@@ -114,17 +121,17 @@ $card-bottom-height: calc(100vh - #{$card-top-height});
   border: none;
   border-radius: 0;
   width: 100vw;
-  height: auto;
+  height: 100%;
 
   .card-img-top {
     height: $card-top-height;
     display: inline-block;
     overflow: hidden;
-    background-color: #444;
+    background-color: #222;
 
     img {
       filter: blur(2.25px);
-      opacity: 0.6;
+      opacity: 0.5;
       height: auto;
       width: 100%;
       border-bottom: 2px solid #333;
@@ -133,7 +140,7 @@ $card-bottom-height: calc(100vh - #{$card-top-height});
 
   .card-title {
     text-align: center;
-    top: $card-top-height / 2;
+    top: $card-top-height / 2.75;
     position: absolute;
     margin: 0 auto;
     text-align: center;
@@ -154,5 +161,25 @@ $card-bottom-height: calc(100vh - #{$card-top-height});
     height: $card-bottom-height;
     overflow-y: scroll;
     overflow-x: hidden;
+  }
+
+  .description {
+    @include mq(phones) {
+      padding: 0rem .35rem .8rem .35rem;
+      p { font-size: .7rem; }
+    }
+    @include mq(phonel) {
+      padding: 0rem 1rem .8rem;
+      p { font-size: 1rem; }
+    }
+    @include mq(tabletp) {
+      padding: 0rem 4rem .8rem;
+      p { font-size: 1.2rem; }
+    }
+  }
+
+  button {
+    background-color: darken($color-accent, 10);
+    margin: $card-top-height/3.4 1rem;
   }
 }

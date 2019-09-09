@@ -35,7 +35,11 @@ const Project = ( props ) => {
           alt={ props.title }
         />
       </div>
-      <div className="card-title"><h2>{ props.title }</h2></div>
+
+      { !props.inFocus
+          ? <div className="card-title"><h2>{ props.title }</h2></div>
+          : '' }
+
       <div className="card-details">
       { !props.inFocus ? <div className="tech">{ tagsList }</div> : '' }
       { !props.inFocus

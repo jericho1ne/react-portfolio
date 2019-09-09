@@ -13,22 +13,21 @@ import headerData from '../../assets/headerData.json'
 
 // Build container of image assets
 const projectImages = require.context('../../assets/projects', true)
+const viewportHeight = window.innerHeight
+
+console.log (" right after declaration: ")
+
+console.log (viewportHeight)
 
 class App extends Component {
   state = {
     viewState: 'projects',
     projects: projectData,
     header: {
-      title: headerData.title,
-      body: headerData.body,
-      links: headerData.links.slice(0, 3),
       isVisible: true,
     },
     images: projectImages,
     projectInFocus: '',
-    scroll: {
-      vHeight: window.innerHeight,
-    },
   }
 
   /**
@@ -76,15 +75,23 @@ class App extends Component {
   handleScroll = (event) => {
     console.log("scrolling")
     // console.log( window.pageYOffset )
-    const yPos = document.documentElement.scrollTop
-    console.log( yPos )
+    const yPos = Math.round(document.documentElement.scrollTop)
 
+
+console.log (" inside handleScroll: ")
+
+console.log (viewportHeight)
+
+    // const viewportHeight = this.state.scroll.vHeight
     // Check if screen has been scrolled at least halfway down
-    const farEnoughDown = yPos > (this.state.scroll.vHeight / 2)
+    const farEnoughDown = yPos > Math.round(viewportHeight / 4)
+    console.log( `ypos: ${yPos} , vHeight: ${viewportHeight}, farEnoughDown: ${farEnoughDown}` )
+
+    // console.warn(farEnoughDown)
 
     this.setState({
       scroll: {
-        showHeader: farEnoughDown
+        showHeader: !farEnoughDown
       }
     })
   }
@@ -104,6 +111,10 @@ class App extends Component {
   render() {
     // Grab images separately we'll need to create file resources later
     let projectImages = this.state.images
+
+
+console.log (" inside render(): ")
+console.log (viewportHeight)
 
     // Lock body scroll if a project detail modal is showing
     document.body.classList.toggle('lock-scroll', this.state.projectInFocus !== '')
@@ -132,9 +143,9 @@ class App extends Component {
       <div className="App">
         <Header
           isVisible={ this.state.header.isVisible }
-          links={ this.state.header.links }
-          title={ this.state.header.title }
-          body={ this.state.header.body }
+          links={ headerData.links.slice(0, 3) }
+          title={ headerData.title }
+          body={ headerData.body }
         />
         <content>
           <div className={`content-overlay ${(this.state.projectInFocus !== '' ? 'show' : '' )}`}></div>
