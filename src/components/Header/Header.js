@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactMarkdown from 'react-markdown'
 
 import './Header.scss'
 
@@ -16,12 +17,17 @@ const Header = ( props ) => {
     )
   })
 
+  // Create JSX fragment of wecome message
+  const welcomeDiv = <React.Fragment>
+      <ReactMarkdown className="cover-heading" source={ props.title} />
+      <ReactMarkdown className="subtitle" source={ props.body} />
+    </React.Fragment>
+
   return (
     <header className="header">
-      <h2 className="cover-heading">Hello.</h2>
-      <p className="subtitle">
-        I am a full stack developer, cyclist and coffee enthusiast. Founder of <a href="https://lowtidedigital.com/">Low Tide Digital</a> & <a href="http://envueplatform.com">Envue</a>.
-      </p>
+      { props.isVisible
+        ? welcomeDiv
+        : '' }
       <div className="header__links">
         { linkButtons }
       </div>

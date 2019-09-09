@@ -98,8 +98,7 @@ $card-bottom-height: calc(100vh - #{$card-top-height});
 
   .tech,
   .description {
-    padding: .6rem 4rem;
-    // border: 1px solid blue;
+    padding: 0rem 4rem .8rem;
   }
 }
 
@@ -151,8 +150,9 @@ $card-bottom-height: calc(100vh - #{$card-top-height});
   }
 
   .card-details {
-    padding: 1rem 2rem;
+    padding: 0rem 2rem;
     height: $card-bottom-height;
     overflow-y: scroll;
+    overflow-x: hidden;
   }
 }
