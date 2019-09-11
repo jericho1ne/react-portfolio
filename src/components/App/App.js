@@ -15,6 +15,8 @@ import headerData from '../../assets/headerData.json'
 const projectImages = require.context('../../assets/projects', true)
 const viewportHeight = window.innerHeight
 
+console.log(projectImages)
+
 class App extends Component {
   state = {
     viewState: 'projects',
