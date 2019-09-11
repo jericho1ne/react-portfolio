@@ -11,10 +11,6 @@ $card-bottom-height: calc(100% - #{$card-top-height});
   flex-basis: auto;
   width: auto;
   opacity: 1;
-  // transform: scale(1.0);
-  // transition: filter 1s ease-in;
-  // height 0.25s ease-out, width 1.25s ease-out, padding 0.5 ease-out, margin 0.8s linear;
-  // transition: all 1s linear;
   border: 1px solid lighten($gray-dark, 50);
   border-radius: 0.25rem;
   background-color: rgba(255,255,255, 1);
@@ -26,38 +22,32 @@ $card-bottom-height: calc(100% - #{$card-top-height});
   line-height: 1.5;
 
   @include mq(phones) {
-    flex-basis: calc(100% - #{$card-margin});
+    flex-basis: calc(100% - #{0.7 * $card-margin});
 	}
   @include mq(phonel) {
-    flex-basis: calc(100% - #{$card-margin});
+    flex-basis: calc(100% - #{0.6 * $card-margin});
 	}
 	@include mq(tabletp) {
-    flex-basis: calc(50% - #{$card-margin});
+    flex-basis: calc(50% - #{2 * $card-margin});
   }
 	@include mq(tabletl) {
-    flex-basis: calc(33% - #{$card-margin});
+    flex-basis: calc(33% - #{3 * $card-margin});
 	}
 	@include mq(laptop) {
-    flex-basis: calc(25% - #{$card-margin});
+    flex-basis: calc(25% - #{4 * $card-margin});
   }
   @include mq(desktop) {
-    flex-basis: calc(23% - #{$card-margin});
+    flex-basis: calc(25% - #{4 * $card-margin});
   }
 
   .card-img-top {
     background-color: #fff;
     cursor: pointer;
-    transition: background-color .4s ease-out;
+    @include transition(background-color .4s ease-out);
     width: 100%;
 
     img {
-      transition: filter 0.85s ease-out, opacity 0.3s ease-out  ;
-      // transition: 1s all linear;
-      // -webkit-transition: 1s -webkit-all linear;
-      // -moz-transition: 1s -moz-all linear;
-      // -ms-transition: 1s -ms-all linear;
-      // -o-transition: 1s -o-all linear;
-
+      @include transition(filter 0.85s ease-out, opacity 0.3s ease-out);
       filter: blur(0px);
       width: 100%;
       height: auto;
@@ -70,18 +60,13 @@ $card-bottom-height: calc(100% - #{$card-top-height});
   }
 
   .card-title {
-    h2 {
-      transition: opacity 0.35s ease-out;
-      font-size: 1.65rem;
-      line-height: 1.2;
-      margin: 2rem 0 0 0;
-      color: #333;
-    }
+    @include transition(opacity 0.35s ease-out);
+    line-height: 1.2;
+    margin: 1rem 0;
+    color: $color-tertiary;
   }
 
   .card-details {
-    padding: 1.5rem;
-
     p {
       color: #282c34;
     }

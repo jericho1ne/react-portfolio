@@ -20,7 +20,7 @@
     "subtitle": "Twitter demo using Firebase Hosting + Cloud Functions.",
     "tech": "Vue.js, Node, Twitter API, Firebase",
     "type": "web app",
-    "detail": "Technical demo incorporationg the twitter API and a Vue.js frontend. Do keep in mind - __Machete Don't Tweet__!",
+    "detail": "Technical demo incorporationg the twitter API and a Vue.js frontend. But keep in mind that __Machete Don't Tweet__!",
     "media": {
       "link": "https://node-twitter.firebaseapp.com",
       "repo": "https://github.com/jericho1ne/vuejs-twitter"

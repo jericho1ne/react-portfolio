@@ -1,40 +1,59 @@
-body{
+// Multiplier used to increment font sizes and padding
+$m: 1.1;
+$body_fs: 0.8rem;
+$header_fs: $body_fs * 1.5;
+
+$h1_fs: $header_fs * 6;
+$h2_fs: $header_fs * 5;
+$h3_fs: $header_fs * 4;
+$h4_fs: $header_fs * 3;
+$h5_fs: $header_fs * 2;
+$h6_fs: $header_fs;
+
+body {
   @include mq(phones) {
-    h1 { font-size: 2.5rem }
-    h2 { font-size: 2rem }
-    p { font-size: 0.85em }
-    header {
-      padding:0.9em;
-    }
+    h1 { font-size: $h1_fs * $m }
+    h2 { font-size: $h2_fs * $m }
+    p { font-size: 0.7em }
+    header { padding:0.9em; }
+    .project__cards { padding: .1rem; }
+    .card-details { padding: .25rem .5rem 1rem .5rem }
   }
   @include mq(phonel) {
     h1 { font-size: 2.6rem }
     h2 { font-size: 2.1rem }
-    p { font-size: .85rem }
+    p { font-size: .75rem }
+    .project__cards { padding: .2rem; }
+    .card-details { padding: .3rem .75rem 1.5rem .75rem }
   }
   @include mq(tabletp) {
     h1 { font-size: 2.75rem }
     h2 { font-size: 2.2rem }
-    p { font-size: 0.9em }
-    header {
-      padding: 1.5em;
-    }
+    p { font-size: 0.80em }
+    header { padding: 1.5em; }
+    .project__cards { padding: .25rem; }
+    .card-details { padding: .35rem .85rem 1.7rem .85rem }
   }
   @include mq(tabletl) {
-    h1 { font-size: 2.85rem }
-    h2 { font-size: 2.3rem }
-    p { font-size: 1.0em }
+    h1 { font-size: h1_fs }
+    h2 { font-size: h1_fs }
+    p { font-size: $body_fs }
+    .project__cards { padding: .5rem }
+    .card-details { padding: .4rem .9rem 1.8rem .9rem }
   }
   @include mq(laptop) {
-    h1 { font-size: 3.0rem }
-    h2 { font-size: 2.5rem }
-    p { font-size: 1.1em };
-    header {
-      padding: 2em;
-    }
+    h1 { font-size: h1_fs }
+    h2 { font-size: h1_fs }
+    p { font-size: $body_fs };
+    header { padding: 2em; }
+    .project__cards { padding: 1rem; }
+    .card-details { padding: .5rem 1rem 1rem 1rem }
   }
   @include mq(desktop) {
     h1 { font-size: 3.2rem }
     h2 { font-size: 2.7rem }
+    p { font-size: 0.9em };
+    .project__cards { padding: 2rem; }
+    .card-details { padding: .5rem 1rem 1rem 1rem }
   }
 }
