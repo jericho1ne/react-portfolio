@@ -10,12 +10,12 @@ body{
   @include mq(phonel) {
     h1 { font-size: 2.6rem }
     h2 { font-size: 2.1rem }
-    p { font-size: .9rem }
+    p { font-size: .85rem }
   }
   @include mq(tabletp) {
     h1 { font-size: 2.75rem }
     h2 { font-size: 2.2rem }
-    p { font-size: 1.0em }
+    p { font-size: 0.9em }
     header {
       padding: 1.5em;
     }
@@ -23,12 +23,12 @@ body{
   @include mq(tabletl) {
     h1 { font-size: 2.85rem }
     h2 { font-size: 2.3rem }
-    p { font-size: 1.1em }
+    p { font-size: 1.0em }
   }
   @include mq(laptop) {
     h1 { font-size: 3.0rem }
     h2 { font-size: 2.5rem }
-    p { font-size: 1.2em };
+    p { font-size: 1.1em };
     header {
       padding: 2em;
     }
@@ -36,6 +36,5 @@ body{
   @include mq(desktop) {
     h1 { font-size: 3.2rem }
     h2 { font-size: 2.7rem }
-    p { font-size: 1.3em }
   }
 }

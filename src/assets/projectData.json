@@ -54,9 +54,9 @@
 
   {
     "id": "architecture-flashcards",
-    "title": "Architecture Study Guide Flashcards",
+    "title": "Architecture Study Guide",
     "type": "website",
-    "subtitle": "Color-coordinated set of study guide flashcards representing objects from each historic period.",
+    "subtitle": "Color-coordinated flashcards representing architectural objects from various historic periods.",
     "tech": "jQuery, Bootstrap",
     "detail": "Check out the screencap in the [Vimeo app](https://vimeo.com/160999718) or watch it below.",
     "thumb": "architecture-flashcards.jpg",
