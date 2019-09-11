@@ -3,7 +3,7 @@
 
 $card-margin: 1rem;
 
-$card-top-height: 100px;
+$card-top-height: 28%;
 $card-bottom-height: calc(100% - #{$card-top-height});
 
 .project-card {
@@ -28,7 +28,7 @@ $card-bottom-height: calc(100% - #{$card-top-height});
     flex-basis: calc(100% - #{0.6 * $card-margin});
 	}
 	@include mq(tabletp) {
-    flex-basis: calc(50% - #{2 * $card-margin});
+    flex-basis: calc(49% - #{2 * $card-margin});
   }
 	@include mq(tabletl) {
     flex-basis: calc(33% - #{3 * $card-margin});
@@ -61,7 +61,7 @@ $card-bottom-height: calc(100% - #{$card-top-height});
 
   .card-title {
     @include transition(opacity 0.35s ease-out);
-    line-height: 1.2;
+    line-height: 1.35;
     margin: 1rem 0;
     color: $color-tertiary;
   }
@@ -99,7 +99,7 @@ $card-bottom-height: calc(100% - #{$card-top-height});
     height: $card-top-height;
     display: inline-block;
     overflow: hidden;
-    background-color: #222;
+    background-color: #fff;
 
     img {
       filter: blur(2.25px);
