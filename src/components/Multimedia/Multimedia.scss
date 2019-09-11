@@ -3,12 +3,12 @@
 
 .multimedia-container {
   height: auto;
-  min-height: 400px;
+  min-height: 340px;
   padding: 1rem 0 0 0;
-  margin: 0 -1rem;
+  margin: 0 -1rem 4rem -1rem;
 
   iframe, .slider {
-    border: 1px solid #ddd;
+    // border: 1px solid #ddd;
   }
 
   iframe {
@@ -16,10 +16,10 @@
       height: 320px;
     }
     @include mq(phonel) {
-      height: 480px;
+      height: 360px;
     }
     @include mq(tabletp) {
-      height: 640px;
+      height: 540px;
     }
     @include mq(tabletl) {
       height: 720px;
