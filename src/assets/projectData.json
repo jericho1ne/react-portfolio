@@ -48,22 +48,20 @@
     "thumb": "find-some-coffee.jpg",
     "media": {
       "link": "http://findsomecoffee.com/",
-      "images": [],
-      "video": []
+      "images": []
     }
   },
+
   {
-    "id": "starterkit-media",
-    "title": "Starterkit Media",
+    "id": "architecture-flashcards",
+    "title": "Architecture Study Guide Flashcards",
     "type": "website",
-    "subtitle": "Fast loading, responsive landing page for media production company.",
-    "tech": "Jekyll, HTML, Markdown, Liquid",
-    "detail": "Turkey ham swine, capicola brisket buffalo prosciutto drumstick shoulder venison pastrami salami porchetta.",
-    "thumb": "starterkit-media.jpg",
+    "subtitle": "Color-coordinated set of study guide flashcards representing objects from each historic period.",
+    "tech": "jQuery, Bootstrap",
+    "detail": "Check out the screencap in the [Vimeo app](https://vimeo.com/160999718) or watch it below.",
+    "thumb": "architecture-flashcards.jpg",
     "media": {
-      "link": "https://starterkitmedia.com/",
-      "images": [],
-      "video": []
+      "embed": "<iframe src='https://player.vimeo.com/video/160999718' width='100%' height='700'  frameborder='0' allow='autoplay; fullscreen' allowfullscreen></iframe>"
     }
   },
 
@@ -76,25 +74,8 @@
     "detail": "This force graph visualization outlines 12 different schemes, as laid out by the FBI in 2015. The **Icons** represent each _Actor_ involved, **Colors** denote _Connection_ types, and **Line Type** defines actual vs planned _Payoffs_. Featured on USA Today's [Fields of Green](http://thefieldsofgreen.com/2015/06/19/fifa-infographic/). Collaborative project with [Rook Campbell, PhD](https://uscpublicdiplomacy.org/users/rook_campbell) - USC Center on Public Diplomacy.",
     "thumb": "fifa-gate.jpg",
     "media": {
-      "link": "fifa-gate.html",
-      "embed": "<iframe src='http://mihaipeteu.com/media/projects/visualization-fifagate' width='100%' height='700' frameborder='0' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>",
-      "images": []
-    }
-  },
-
-  {
-    "id": "mapping-live-music",
-    "title": "Tracking Live Music Venues",
-    "type": "dataviz",
-    "subtitle": "Los Angeles live music venue density map.",
-    "tech": "CartoDB, MySQL",
-    "detail": "A visualization of 210 live music events taking place at 87 different venues across Los Angeles, over the course of a week. Data scraped from Ticketfly.",
-    "link": "https://jericho1ne.carto.com/viz/e2d9efda-4c42-11e3-b6c4-a779afcc8bc7/public_map",
-    "thumb": "live-shows.jpg",
-    "media": {
-      "embed": "<iframe src='https://jericho1ne.carto.com/viz/e2d9efda-4c42-11e3-b6c4-a779afcc8bc7/embed_map' width='100%' height='520' frameborder='0' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>",
-      "images": [],
-      "video": []
+      "link": "",
+      "embed": "<iframe src='http://mihaipeteu.com/media/projects/visualization-fifagate' width='100%' height='700' frameborder='0' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>"
     }
   },
 
@@ -108,8 +89,7 @@
     "thumb": "middle-of-june.jpg",
     "media": {
       "link": "http://middleofjune.com",
-      "images": [],
-      "video": []
+      "images": []
     }
   },
 
@@ -127,6 +107,35 @@
         "waterbowl-02.jpg"
       ],
       "video": []
+    }
+  },
+
+  {
+    "id": "starterkit-media",
+    "title": "Starterkit Media",
+    "type": "website",
+    "subtitle": "Fast loading, responsive landing page for media production company.",
+    "tech": "Jekyll, HTML, Markdown, Liquid",
+    "detail": "Turkey ham swine, capicola brisket buffalo prosciutto drumstick shoulder venison pastrami salami porchetta.",
+    "thumb": "starterkit-media.jpg",
+    "media": {
+      "link": "https://starterkitmedia.com/",
+      "images": [],
+      "video": []
+    }
+  },
+
+  {
+    "id": "mapping-live-music",
+    "title": "Tracking Live Music Venues",
+    "type": "dataviz",
+    "subtitle": "Los Angeles live music venue density map.",
+    "tech": "CartoDB, MySQL",
+    "detail": "A visualization of 210 live music events taking place at 87 different venues across Los Angeles, over the course of a week. Data scraped from Ticketfly.",
+    "link": "https://jericho1ne.carto.com/viz/e2d9efda-4c42-11e3-b6c4-a779afcc8bc7/public_map",
+    "thumb": "live-shows.jpg",
+    "media": {
+      "embed": "<iframe src='https://jericho1ne.carto.com/viz/e2d9efda-4c42-11e3-b6c4-a779afcc8bc7/embed_map' width='100%' height='520' frameborder='0' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>"
     }
   },
 
