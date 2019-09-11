@@ -8,7 +8,7 @@
     "type": "video",
     "detail": "Visual Style Guide / UI Component Library that bridged the gap between UX and developer teams at McGraw Hill. A GitHub Pages-hosted demo page consumed SCSS styles and SVG assets from their respective npm packages.",
     "media": {
-      "embed": "<iframe src='https://player.vimeo.com/video/340378847' width='100%' height='auto' frameborder='0' allow='autoplay; fullscreen' allowfullscreen></iframe>",
+      "embed": "<iframe src='https://player.vimeo.com/video/340378847?autoplay=1&loop=1&autopause=0' width='100%' height='auto' frameborder='0' allow='autoplay; fullscreen' allowfullscreen></iframe>",
       "link": "https://vimeo.com/jericho1ne/open-learning-styleguide"
     }
   },
@@ -63,7 +63,7 @@
     "detail": "Study guide used for a historical survey of global architecture class at USC. Check out the screencap in the [Vimeo app](https://vimeo.com/160999718) or watch it below.",
     "thumb": "architecture-flashcards.jpg",
     "media": {
-      "embed": "<iframe src='https://player.vimeo.com/video/160999718' width='100%' height='auto'  frameborder='0' allow='autoplay; fullscreen' allowfullscreen></iframe>"
+      "embed": "<iframe src='https://player.vimeo.com/video/160999718?autoplay=1&loop=1&autopause=0' width='100%' height='auto'  frameborder='0' allow='autoplay; fullscreen' allowfullscreen></iframe>"
     }
   },
 
