@@ -15,10 +15,6 @@ import headerData from '../../assets/headerData.json'
 const projectImages = require.context('../../assets/projects', true)
 const viewportHeight = window.innerHeight
 
-console.log (" right after declaration: ")
-
-console.log (viewportHeight)
-
 class App extends Component {
   state = {
     viewState: 'projects',
@@ -67,27 +63,16 @@ class App extends Component {
 
   escTriggered = (event) => {
     if (event.keyCode === 27 && this.state.projectInFocus !== '') {
-      console.log(' *** escapeTriggered ***')
       this.setState({ projectInFocus: '' }, () => { })
     }
   }
 
   handleScroll = (event) => {
-    console.log("scrolling")
-    // console.log( window.pageYOffset )
     const yPos = Math.round(document.documentElement.scrollTop)
 
-
-console.log (" inside handleScroll: ")
-
-console.log (viewportHeight)
-
-    // const viewportHeight = this.state.scroll.vHeight
     // Check if screen has been scrolled at least halfway down
     const farEnoughDown = yPos > Math.round(viewportHeight / 4)
-    console.log( `ypos: ${yPos} , vHeight: ${viewportHeight}, farEnoughDown: ${farEnoughDown}` )
-
-    // console.warn(farEnoughDown)
+    // console.log( `ypos: ${yPos} , vHeight: ${viewportHeight}, farEnoughDown: ${farEnoughDown}` )
 
     this.setState({
       scroll: {
@@ -111,10 +96,6 @@ console.log (viewportHeight)
   render() {
     // Grab images separately we'll need to create file resources later
     let projectImages = this.state.images
-
-
-console.log (" inside render(): ")
-console.log (viewportHeight)
 
     // Lock body scroll if a project detail modal is showing
     document.body.classList.toggle('lock-scroll', this.state.projectInFocus !== '')
@@ -153,6 +134,9 @@ console.log (viewportHeight)
            { projectList }
           </div>
         </content>
+        <footer>
+          <hr/><hr/>
+        </footer>
       </div>
     )
   }

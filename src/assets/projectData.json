@@ -1,27 +1,37 @@
 [
   {
     "id": "mhe-open-learning-ui-library",
-    "title": "McGraw Hill UI Library",
-    "type": "web",
-    "subtitle": "McGraw Hill UI component library",
-    "tech": "GitHub Pages, npm, scss",
-    "detail": "Visual Style Guide / UI Component Library that bridged the gap between UX and developer teams at McGraw Hill. A GitHub Pages-hosted demo page consumed SCSS styles and SVG assets from their respective npm packages.",
-    "button": "Video",
-    "link": "https://vimeo.com/jericho1ne/open-learning-styleguide",
     "thumb": "mhe-component-library.jpg",
+    "title": "Open Learning Theme Kit",
+    "subtitle": "McGraw Hill UI component library with implementation examples.",
+    "tech": "GitHub Pages, npm, scss",
+    "type": "video",
+    "detail": "Visual Style Guide / UI Component Library that bridged the gap between UX and developer teams at McGraw Hill. A GitHub Pages-hosted demo page consumed SCSS styles and SVG assets from their respective npm packages.",
+    "link": "https://vimeo.com/jericho1ne/open-learning-styleguide",
     "media": {
       "embed": "<iframe src='https://player.vimeo.com/video/340378847' width='100%' height='539' frameborder='0' allow='autoplay; fullscreen' allowfullscreen></iframe>"
     }
   },
 
   {
+    "id": "twitter-demo",
+    "thumb": "vue-node-twitter-demo.jpg",
+    "title": "Vue.js / Node Twitter Demo",
+    "subtitle": "Twitter demo using Firebase Hosting + Cloud Functions.",
+    "tech": "Vue.js, Node, Twitter API, Firebase",
+    "type": "web app",
+    "detail": "Technical demo incorporationg the twitter API and a Vue.js frontend.",
+    "link": "https://node-twitter.firebaseapp.com",
+    "repo": "https://github.com/jericho1ne/vuejs-twitter"
+  },
+
+  {
     "id": "envue-platform",
     "title": "Envue Platform",
-    "type": "web",
+    "type": "website",
     "subtitle": "SEO-focused hosting platform for small businesses.",
     "tech": "Jekyll, SnipCart, Google Cloud, Search Console",
     "detail": "Turkey ham swine, capicola brisket buffalo prosciutto drumstick shoulder venison pastrami salami porchetta.",
-    "button": "Website",
     "thumb": "envue-seo-platform.jpg",
     "media": {
       "link": "http://envueplatform.com",
@@ -35,7 +45,6 @@
     "subtitle": "Find artisanal coffee nearby, see curated photos and reviews of Los Angeles coffee shops. Mobile app for [Android](https://play.google.com/store/apps/details?id=com.apps.fndsmcoffee) and [iOS](https://itunes.apple.com/us/app/find-some-coffee/id1316428363?mt=8).",
     "tech": "Vue.js, node.js",
     "detail": "Turkey ham swine, capicola brisket buffalo prosciutto drumstick shoulder venison pastrami salami porchetta.",
-    "button": "Website",
     "thumb": "find-some-coffee.jpg",
     "media": {
       "link": "http://findsomecoffee.com/",
@@ -50,7 +59,6 @@
     "subtitle": "Fast loading, responsive landing page for media production company.",
     "tech": "Jekyll, HTML, Markdown, Liquid",
     "detail": "Turkey ham swine, capicola brisket buffalo prosciutto drumstick shoulder venison pastrami salami porchetta.",
-    "button": "Website",
     "thumb": "starterkit-media.jpg",
     "media": {
       "link": "https://starterkitmedia.com/",
@@ -63,10 +71,9 @@
     "id": "fifa-gate",
     "title": "FIFA Gate Soccer Scandal",
     "type": "dataviz",
-    "subtitle": "Visualization showcasing global corruption schemes via money flows between FIFA officials and co-conspirators.",
+    "subtitle": "Visualization showcasing global corruption schemes via money flows between FIFA officials and conspirators.",
     "tech": "Springy.js, jQuery, Photoshop, Google Sheets",
-    "detail": "In the force graph visualization below, the **Icons** represent each _Actor_ involved, **Colors** denote _Connection_ types, and **Line Type** defines actual vs planned _Payoffs_. Featured on USA Today's [Fields of Green](http://thefieldsofgreen.com/2015/06/19/fifa-infographic/). Collaborative project with [Rook Campbell, PhD](https://uscpublicdiplomacy.org/users/rook_campbell) - USC Center on Public Diplomacy.",
-    "button": "Live Demo",
+    "detail": "This force graph visualization outlines 12 different schemes, as laid out by the FBI in 2015. The **Icons** represent each _Actor_ involved, **Colors** denote _Connection_ types, and **Line Type** defines actual vs planned _Payoffs_. Featured on USA Today's [Fields of Green](http://thefieldsofgreen.com/2015/06/19/fifa-infographic/). Collaborative project with [Rook Campbell, PhD](https://uscpublicdiplomacy.org/users/rook_campbell) - USC Center on Public Diplomacy.",
     "thumb": "fifa-gate.jpg",
     "media": {
       "link": "fifa-gate.html",
@@ -82,7 +89,6 @@
     "subtitle": "Los Angeles live music venue density map.",
     "tech": "CartoDB, MySQL",
     "detail": "A visualization of 210 live music events taking place at 87 different venues across Los Angeles, over the course of a week. Data scraped from Ticketfly.",
-    "button": "Live Demo",
     "link": "https://jericho1ne.carto.com/viz/e2d9efda-4c42-11e3-b6c4-a779afcc8bc7/public_map",
     "thumb": "live-shows.jpg",
     "media": {
@@ -99,7 +105,6 @@
     "subtitle": "A Los Angeles live music event aggregator with which searches for detailed artist info and associated video clips.",
     "tech": "Javascript/jQuery, PHP, MySQL",
     "detail": "Turkey ham swine, capicola brisket buffalo prosciutto drumstick shoulder venison pastrami salami porchetta.",
-    "button": "Website",
     "thumb": "middle-of-june.jpg",
     "media": {
       "link": "http://middleofjune.com",
@@ -115,7 +120,6 @@
     "subtitle": "A social network for dog lovers (iOS mobile app).",
     "tech": "Appcelerator, Javascript, MySQL, PHP",
     "detail": "Turkey ham swine, capicola brisket buffalo prosciutto drumstick shoulder venison pastrami salami porchetta.",
-    "button": "Screenshots",
     "thumb": "waterbowl.jpg",
     "media": {
       "images": [
@@ -133,7 +137,6 @@
     "subtitle": "Responsive framework website with a heavy SEO focus, relying heavily on custom-built HTML templates.",
     "tech": "HTML, CSS, Gulp",
     "detail": "Turkey ham swine, capicola brisket buffalo prosciutto drumstick shoulder venison pastrami salami porchetta.",
-    "button": "Website",
     "thumb": "law-office.jpg",
     "media": {
       "link": "http://attorneydulay.com/",

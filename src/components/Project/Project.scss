@@ -84,7 +84,6 @@ $card-bottom-height: calc(100% - #{$card-top-height});
 
     p {
       color: #282c34;
-      font-size: 0.85rem;
     }
   }
 
@@ -161,20 +160,14 @@ $card-bottom-height: calc(100% - #{$card-top-height});
     height: $card-bottom-height;
     overflow-y: scroll;
     overflow-x: hidden;
-  }
-
-  .description {
     @include mq(phones) {
       padding: 0rem .35rem .8rem .35rem;
-      p { font-size: .7rem; }
     }
     @include mq(phonel) {
       padding: 0rem 1rem .8rem;
-      p { font-size: 1rem; }
     }
     @include mq(tabletp) {
       padding: 0rem 4rem .8rem;
-      p { font-size: 1.2rem; }
     }
   }
 

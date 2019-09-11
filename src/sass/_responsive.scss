@@ -2,7 +2,7 @@ body{
   @include mq(phones) {
     h1 { font-size: 2.5rem }
     h2 { font-size: 2rem }
-    p { font-size: 0.8em }
+    p { font-size: 0.85em }
     header {
       padding: 1em 1em .5em 1em;
     }
@@ -10,12 +10,12 @@ body{
   @include mq(phonel) {
     h1 { font-size: 2.6rem }
     h2 { font-size: 2.1rem }
-    p { font-size: 1em }
+    p { font-size: .9rem }
   }
   @include mq(tabletp) {
     h1 { font-size: 2.75rem }
     h2 { font-size: 2.2rem }
-    p { font-size: 1.1em }
+    p { font-size: 1.0em }
     header {
       padding: 2em 2em 1em 2em;
     }
@@ -23,7 +23,7 @@ body{
   @include mq(tabletl) {
     h1 { font-size: 2.85rem }
     h2 { font-size: 2.3rem }
-    p { font-size: 1.2em }
+    p { font-size: 1.1em }
     header {
       padding: 4.5em 8em 4.0em 8em;
     }
@@ -31,7 +31,7 @@ body{
   @include mq(laptop) {
     h1 { font-size: 3.0rem }
     h2 { font-size: 2.5rem }
-    p { font-size: 1.5em };
+    p { font-size: 1.2em };
     header {
       padding: 3em 2em 2.5em 2em;
     }
@@ -39,6 +39,6 @@ body{
   @include mq(desktop) {
     h1 { font-size: 3.2rem }
     h2 { font-size: 2.7rem }
-    p { font-size: 2em }
+    p { font-size: 1.3em }
   }
 }
