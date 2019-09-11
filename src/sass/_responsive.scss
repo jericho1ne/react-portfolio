@@ -4,7 +4,7 @@ body{
     h2 { font-size: 2rem }
     p { font-size: 0.85em }
     header {
-      padding: 1em 1em .5em 1em;
+      padding:0.9em;
     }
   }
   @include mq(phonel) {
@@ -17,23 +17,20 @@ body{
     h2 { font-size: 2.2rem }
     p { font-size: 1.0em }
     header {
-      padding: 2em 2em 1em 2em;
+      padding: 1.5em;
     }
   }
   @include mq(tabletl) {
     h1 { font-size: 2.85rem }
     h2 { font-size: 2.3rem }
     p { font-size: 1.1em }
-    header {
-      padding: 4.5em 8em 4.0em 8em;
-    }
   }
   @include mq(laptop) {
     h1 { font-size: 3.0rem }
     h2 { font-size: 2.5rem }
     p { font-size: 1.2em };
     header {
-      padding: 3em 2em 2.5em 2em;
+      padding: 2em;
     }
   }
   @include mq(desktop) {

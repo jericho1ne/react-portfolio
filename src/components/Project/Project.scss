@@ -94,18 +94,6 @@ $card-bottom-height: calc(100% - #{$card-top-height});
     font-size: 0.8rem;
     color: $gray-dark;
   }
-
-  .tech {
-    @include mq(phones) {
-      padding: 0rem .5rem .8rem;
-    }
-    @include mq(phonel) {
-      padding: 0rem 1rem .8rem;
-    }
-    @include mq(tabletp) {
-      padding: 0rem 4rem .8rem;
-    }
-  }
 }
 
 // When displayed Project expands to fill screen.
