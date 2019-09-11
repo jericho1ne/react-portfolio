@@ -15,8 +15,6 @@ import headerData from '../../assets/headerData.json'
 const projectImages = require.context('../../assets/projects', true)
 const viewportHeight = window.innerHeight
 
-console.log(projectImages)
-
 class App extends Component {
   state = {
     viewState: 'projects',
@@ -32,15 +30,10 @@ class App extends Component {
    * Toggle currently content view
    */
   changeView = (viewName) => {
-    console.warn(`changeView() called: ${viewName}`)
-
     // setState updates current component and all children
     this.setState({
       currentView: viewName
     })
-
-    window.projects = this.state.projects
-    window.viewState = this.state.viewState
   }
 
   /**
@@ -49,9 +42,7 @@ class App extends Component {
    * (always should be toggled back to blank)
    */
   toggleProject = (id) => {
-    // console.warn(`getProject( ${id} )`)
-
-    // Grab detailed info on the requested project
+    // Grab detailed info on the requested project (if needed)
     // const result = this.state.projects.filter(item => item.id === id)
 
     // Determine whether to display the requested project.
@@ -69,12 +60,12 @@ class App extends Component {
     }
   }
 
+  /**
+   *  Collapse (fixed) header once screen scroll occurs a certain amount
+   */
   handleScroll = (event) => {
     const yPos = Math.round(document.documentElement.scrollTop)
-
-    // Check if screen has been scrolled at least halfway down
     const farEnoughDown = yPos > Math.round(viewportHeight / 4)
-    // console.log( `ypos: ${yPos} , vHeight: ${viewportHeight}, farEnoughDown: ${farEnoughDown}` )
 
     this.setState({
       scroll: {
@@ -83,12 +74,18 @@ class App extends Component {
     })
   }
 
+  /**
+   *  Attach listeners when App component is first mounted
+   */
   componentDidMount() {
     // Attach event listeners
     document.addEventListener('keydown', this.escTriggered, false)
     document.addEventListener('scroll', this.handleScroll, { passive: true })
   }
 
+  /**
+   * Remove listeners
+   */
   componentWillUnmount() {
     // Detach event listeners
     document.addEventListener('keydown', this.escTriggered, false)
