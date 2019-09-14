@@ -12,16 +12,13 @@ const Footer = ( props ) => {
           <a href={ websiteData.footer.ghlink }
             target="_blank"
             rel="noopener noreferrer"
-          ><img className="icon"
+          ><button><img className="icon"
             src={ gh_logo }
             alt={ websiteData.footer.alt }
-          /></a>
+          /></button></a>
         </div>
-        <div>
-          <a href={ websiteData.footer.ghlink }
-            target="_blank"
-            rel="noopener noreferrer"
-          >{ websiteData.footer.title }</a>
+        <div className="">
+          <p>{ websiteData.footer.title }</p>
         </div>
       </div>
     </footer>
