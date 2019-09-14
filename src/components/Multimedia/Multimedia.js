@@ -1,6 +1,8 @@
 import React from 'react'
 import './Multimedia.scss'
 
+import Slider from '../Slider/Slider'
+
 // same as filename but should be lowercase
 const Multimedia = ( props ) => {
   const buildIframe = () => {
@@ -22,9 +24,7 @@ const Multimedia = ( props ) => {
   }
   // Screenshots
   else if ('images' in props.media) {
-    media_chunk = props.media.images.map(function(image, index) {
-      return <img key={index} alt="" src={ require(`../../assets/projects/${image}`) } />
-    })
+    media_chunk = <Slider images={ props.media.images } />
   }
 
   return (

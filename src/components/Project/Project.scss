@@ -4,7 +4,7 @@
 $card-margin: 1rem;
 
 $card-top-height: 28vh;
-$card-bottom-height: calc(100vh - #{$card-top-height});
+$card-bottom-height: calc(100% - #{$card-top-height});
 
 .project-card {
   flex-grow: 1;
@@ -140,7 +140,6 @@ $card-bottom-height: calc(100vh - #{$card-top-height});
       overflow-y: scroll;
       // overflow-x: hidden;
       box-shadow: 0.25rem -0.25rem 1.5rem rgba(0, 0, 0, 0.35);
-
 
       @include mq(phones) {
         padding: 0rem .25rem .8rem .25rem;

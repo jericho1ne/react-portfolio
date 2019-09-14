@@ -76,8 +76,7 @@
     "detail": "This force graph visualization outlines 12 different schemes, as laid out by the FBI in 2015. The **Icons** represent each _Actor_ involved, **Colors** denote _Connection_ types, and **Line Type** defines actual vs planned _Payoffs_. Featured on USA Today's [Fields of Green](http://thefieldsofgreen.com/2015/06/19/fifa-infographic/). Collaborative project with [Rook Campbell, PhD](https://uscpublicdiplomacy.org/users/rook_campbell) - USC Center on Public Diplomacy.",
     "thumb": "fifa-gate.jpg",
     "media": {
-      "link": "",
-      "embed": "<iframe src='http://mihaipeteu.com/media/projects/visualization-fifagate' width='100%' height='auto' frameborder='0' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>"
+      "link": "http://mihaipeteu.com/media/projects/visualization-fifagate"
     }
   },
 

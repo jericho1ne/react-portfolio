@@ -1,0 +1,58 @@
+@import '../../sass/_mixins';
+@import '../../sass/_colors';
+
+@import '../../sass/libraries/_slick-theme';
+@import '../../sass/libraries/_slick';
+
+.slick-slider {
+  width: 100%;
+
+  .slick-list {
+    z-index: 0;
+  }
+
+  button.slick-arrow {
+    background: transparent !important;
+    margin: 0 !important;
+    z-index: 2;
+
+    &.slick-next,
+    &.slick-prev {
+      top: 92%;
+    }
+    &.slick-prev{
+      left: 8%;
+    }
+    &.slick-next{
+      right: 8%;
+    }
+
+    &:hover {
+      transform: translateY(0) !important;
+    }
+  }
+
+  .slick-prev:before, .slick-next:before {
+    color: $color-secondary;
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  .slick-dots {
+    position: relative;
+    bottom: 0;
+
+    li {
+      margin: 0;
+      button {
+        background: transparent !important;
+
+        &::before {
+          font-size: 1rem;
+          color: $color-secondary;
+        }
+      }
+    }
+
+  }
+}

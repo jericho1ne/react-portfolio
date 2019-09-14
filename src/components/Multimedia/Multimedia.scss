@@ -2,10 +2,10 @@
 @import '../../sass/_colors';
 
 .multimedia-container {
-  height: 100%;
+  height: auto;
+  min-height: 50vh;
   width: 100%;
-  min-height: 340px;
-  padding: 1rem 0 0 0;
+  padding: 1rem auto;
   margin: 0;
 
   iframe, .slider {
