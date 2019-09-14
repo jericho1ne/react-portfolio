@@ -5,7 +5,6 @@ import Multimedia from '../Multimedia/Multimedia'
 
 import './Project.scss'
 
-// same as filename but should be lowercase
 const Project = ( props ) => {
   // Get list of tech used in project, turn it into individual Tags
   const tags = props.tech.split(",").map(function(item) {

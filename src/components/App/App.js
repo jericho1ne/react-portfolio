@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 import Project from '../Project/Project'
 import Header from '../Header/Header'
+import Footer from '../Footer/Footer'
 import ErrorBoundary from '../ErrorBoundary/ErrorBoundary'
 
 // Styles
@@ -9,7 +10,7 @@ import './App.scss'
 
 // External data
 import projectData from '../../assets/projectData.json'
-import headerData from '../../assets/headerData.json'
+import websiteData from '../../assets/websiteData.json'
 
 // Build container of image assets
 const projectImages = require.context('../../assets/projects', true)
@@ -123,9 +124,9 @@ class App extends Component {
       <div className="App">
         <Header
           isVisible={ this.state.header.isVisible }
-          links={ headerData.links.slice(0, 3) }
-          title={ headerData.title }
-          body={ headerData.body }
+          links={ websiteData.header.links.slice(0, 3) }
+          title={ websiteData.header.title }
+          body={ websiteData.header.body }
         />
         <content>
           <div className={`content-overlay ${(this.state.projectInFocus !== '' ? 'show' : '' )}`}></div>
@@ -133,9 +134,7 @@ class App extends Component {
            { projectList }
           </div>
         </content>
-        <footer>
-          <hr/><hr/>
-        </footer>
+        <Footer />
       </div>
     )
   }

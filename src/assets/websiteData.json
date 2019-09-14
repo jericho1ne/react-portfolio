@@ -1,0 +1,38 @@
+{
+  "header": {
+    "title": "## Hello.",
+    "body": "I am a full stack developer, cyclist and coffee enthusiast. Founder of [Low Tide Digital](https://lowtidedigital.com/) & [Envue](http://envueplatform.com).",
+
+    "links": [
+      {
+        "id": 0,
+        "title": "GitHub",
+        "url": "https://github.com/jericho1ne"
+      },
+
+      {
+        "id": 1,
+        "title": "LinkedIn",
+        "url": "http://www.linkedin.com/in/mihaipeteu/"
+      },
+
+      {
+        "id": 2,
+        "title": "Resume",
+        "url": "http://mihaipeteu.com/media/mihai-peteu-resume.pdf"
+      },
+
+      {
+        "id": 3,
+        "title": "ATHlinks",
+        "url": "https://www.athlinks.com/athletes/150815525/results"
+      }
+    ]
+  },
+
+  "footer": {
+    "title": "View source",
+    "alt": "View source of this project on GitHub",
+    "ghlink": "https://github.com/jericho1ne/react-portfolio"
+  }
+}

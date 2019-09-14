@@ -3,7 +3,6 @@ import ReactMarkdown from 'react-markdown'
 
 import './Header.scss'
 
-// same as filename but should be lowercase
 const Header = ( props ) => {
   // Build
   const linkButtons = props.links.map(function(link) {
