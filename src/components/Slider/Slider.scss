@@ -31,13 +31,14 @@
   .slick-prev,
   .slick-next {
     &:active {
-      transform: translateY(0.01em);
+      transform: translateY(0.02em) !important;
     }
     &:before {
       color: $color-secondary;
       font-size: 2.25rem;
       margin: 0;
-      background: rgba(255,255,255, 0.9);
+      text-shadow: 0.05rem 0.05rem 0.025rem rgba(255, 255, 255, 0.85);
+      // background: rgba(255,255,255, 0.9);
       padding: .15rem;
       border-radius: 45%;
     }

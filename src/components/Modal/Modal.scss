@@ -35,9 +35,12 @@ $pad-lg: 1rem 4rem;
     @include mq(phonel) { padding: $pad-md; }
     @include mq(tabletp) { padding: $pad-lg; }
 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     border-bottom: 1px solid $color-gray-light;
     z-index: 101;
-    min-height: 10vh;
+    min-height: 8vh;
     overflow: hidden;
     background-color: #fff;
     padding-bottom: 1rem;
@@ -55,7 +58,7 @@ $pad-lg: 1rem 4rem;
         font-size: 1.5rem;
         letter-spacing: 0.03rem;
       }
-      margin: .5rem auto 0 auto;
+      margin: 1rem auto;
       opacity: 0.9;
       color: $color-tertiary;
     }
@@ -93,6 +96,7 @@ $pad-lg: 1rem 4rem;
 
   button {
     background-color: darken($color-accent, 10);
-    margin: .5rem;
+    margin: auto .5rem;
+    max-height: 3rem;
   }
 }

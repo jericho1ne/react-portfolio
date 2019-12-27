@@ -14,11 +14,13 @@ const Modal = ( props ) => {
 
       {/* Modal header */}
       <div className="modal-header" onClick={ props.closeHandler } >
-        <button className="center"
+        <h2 className="">{ props.title }</h2>
+        <div>
+          <button className="center"
           id={ props.id }
           onClick={ props.closeHandler }
-        >Close</button>
-        <h2 className="">{ props.title }</h2>
+         >Close</button>
+        </div>
       </div>
       {/* Modal body */}
       <div className="modal-body">
