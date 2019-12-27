@@ -91,7 +91,7 @@ a.button {
     box-shadow: 0 0 0.05rem rgba(200, 200, 200, 1);
   }
   &.float-right {
-    position: absolute;
+    position: relative;
     z-index: 11;
     right: 0;
     top: 0;
@@ -106,7 +106,7 @@ hr {
 
 $scrollbar-width: 6px;
 
-// Scrollbar cusom
+// Scrollbar custom
 body::-webkit-scrollbar-track,
 .card-details::-webkit-scrollbar-track {
   -webkit-box-shadow: none;

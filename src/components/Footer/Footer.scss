@@ -10,7 +10,6 @@ footer {
   align-items: center;
   justify-content: center;
   color: #fff;
-  text-transform: lowercase;
 
   button {
     margin: 0;
@@ -18,5 +17,9 @@ footer {
     width: 4rem;
     height: 4rem;
     padding: 0.3rem;
+  }
+
+  .icon {
+    margin: .2rem;
   }
 }

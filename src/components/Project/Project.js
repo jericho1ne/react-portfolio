@@ -25,29 +25,25 @@ const Project = ( props ) => {
     <div className={`project-card ${(props.inFocus ? 'project-focus' : '')}`}
       style={{ opacity: props.opacity }} >
 
-      <div className="card-img-top" onClick={ props.clickHandler }>
-        { props.inFocus
-            ? <button className="float-right" id={ props.id } onClick={ props.clickHandler }>Close</button>
-            : '' }
+      <div className="card-img-top" onClick={ props.openHandler }>
         <img className=""
           src={ props.thumb }
           alt={ props.title }
         />
       </div>
 
-      { !props.inFocus
+
+      <h3 className="card-title">{ props.title }</h3>
+      {/* { !props.inFocus
           ? <h3 className="card-title">{ props.title }</h3>
-          : '' }
+          : '' } */}
 
       <div className="card-details">
-      { !props.inFocus ? <div className="tech">{ tagsList }</div> : '' }
-      { !props.inFocus
-          ? <div className="card-subtitle"><ReactMarkdown source={ props.subtitle} /></div>
-          : '' }
-        <div className={`description ${(!props.inFocus ? 'd-none' : '')}`}><ReactMarkdown source={ props.detail } /></div>
-        { !props.inFocus
-          ? <div className="float-bottom"><button onClick={ props.clickHandler }>Details</button></div>
-          : <Multimedia media={ props.media } /> }
+        <div className="tech">{ tagsList }</div>
+        <div className="card-subtitle"><ReactMarkdown source={ props.subtitle} /></div>
+        <div className="float-bottom">
+          <button onClick={ props.openHandler }>Details</button>
+        </div>
       </div>
 
     </div>

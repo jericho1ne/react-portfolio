@@ -1,6 +1,7 @@
 // Libraries & Components
 import React, { Component } from 'react'
 import Project from '../Project/Project'
+import Modal from '../Modal/Modal'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import ErrorBoundary from '../ErrorBoundary/ErrorBoundary'
@@ -18,13 +19,14 @@ const viewportHeight = window.innerHeight
 
 class App extends Component {
   state = {
-    viewState: 'projects',
+    currentView: 'projects',
     projects: projectData,
     header: {
       isVisible: true,
     },
     images: projectImages,
-    projectInFocus: '',
+    modalVisible: false,
+    pFocus: {},
   }
 
   /**
@@ -42,22 +44,35 @@ class App extends Component {
    * Example of State changes: '' -> 3 -> '' -> 2
    * (always should be toggled back to blank)
    */
-  toggleProject = (id) => {
+  showProjectModal = (id) => {
     // Grab detailed info on the requested project (if needed)
-    // const result = this.state.projects.filter(item => item.id === id)
+    const projDetails = this.state.projects.filter(item => item.id === id)[0]
 
     // Determine whether to display the requested project.
     // Else, close the fullscreen modal.
-    const projectInFocus = this.state.projectInFocus
-      ? ''
-      : id
-
-    this.setState({ projectInFocus }, () => { })
+    this.setState({
+      pFocus: projDetails,
+      modalVisible: true
+    }, () => {
+      console.log(this.state.pFocus)
+     })
   }
 
+  hideProjectModal() {
+    this.setState({
+      pFocus: {},
+      modalVisible: false,
+    }, () => {
+      console.log(this.state.pFocus)
+    })
+  }
+
+  /**
+   * Escape key also closes project detail modal
+   */
   escTriggered = (event) => {
-    if (event.keyCode === 27 && this.state.projectInFocus !== '') {
-      this.setState({ projectInFocus: '' }, () => { })
+    if (event.keyCode === 27) {
+      this.hideProjectModal();
     }
   }
 
@@ -98,7 +113,7 @@ class App extends Component {
     let projectImages = this.state.images
 
     // Lock body scroll if a project detail modal is showing
-    document.body.classList.toggle('lock-scroll', this.state.projectInFocus !== '')
+    document.body.classList.toggle('lock-scroll', this.state.modalVisible)
 
     var projectList = this.state.projects.map((project, index) => {
       return (
@@ -113,8 +128,7 @@ class App extends Component {
             thumb={ projectImages(`./${project.thumb}`) }
             tech={ project.tech }
             media={ project.media }
-            inFocus={ (this.state.projectInFocus === project.id) }
-            clickHandler={ event => this.toggleProject(project.id) }
+            openHandler={ event => this.showProjectModal(project.id) }
           />
         </ErrorBoundary>
       )
@@ -129,10 +143,20 @@ class App extends Component {
           body={ websiteData.header.body }
         />
         <content>
-          <div className={`content-overlay ${(this.state.projectInFocus !== '' ? 'show' : '' )}`}></div>
+          <div className={`content-overlay ${(this.state.modalVisible ? 'show' : '' )}`}></div>
           <div className="project__cards">
-           { projectList }
+            { projectList }
           </div>
+          <Modal
+            key="project-modal"
+            show={ this.state.modalVisible }
+            title={ this.state.pFocus.title }
+            subtitle={ this.state.pFocus.subtitle }
+            tech={ this.state.pFocus.tech }
+            detail={ this.state.pFocus.detail }
+            media={ this.state.pFocus.media }
+            closeHandler={ event => this.hideProjectModal() }
+          />
         </content>
         <Footer />
       </div>
