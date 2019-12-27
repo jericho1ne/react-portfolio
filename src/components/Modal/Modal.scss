@@ -1,22 +1,13 @@
 @import '../../sass/_mixins';
 @import '../../sass/_colors';
 
-
-$pad-sm: .5rem 1rem .5rem;
-$pad-md: 1rem 2rem 1rem;
-$pad-lg: 2rem 4rem 4rem;
+$pad-sm: .5rem 1rem;
+$pad-md: .75rem 2rem;
+$pad-lg: 1rem 4rem;
 
 // Project modal expands to fill screen
 .modal-wrapper {
-  @include mq(phones) {
-    padding: $pad-sm;
-  }
-  @include mq(phonel) {
-    padding: $pad-md;
-  }
-  @include mq(tabletp) {
-    padding: $pad-lg;
-  }
+  @include transition(opacity .85s ease-out);
 
   &.modal-show {
     display: block;
@@ -35,12 +26,16 @@ $pad-lg: 2rem 4rem 4rem;
   margin: 0;
   border: none;
   margin: 0;
-  width: auto;
+  width: 100%;
   height: 100vh;
   box-shadow: none;
 
   .modal-header {
-    @include transition(opacity .85s ease-out);
+    @include mq(phones) { padding: $pad-sm; }
+    @include mq(phonel) { padding: $pad-md; }
+    @include mq(tabletp) { padding: $pad-lg; }
+
+    border-bottom: 1px solid $color-gray-light;
     z-index: 101;
     min-height: 10vh;
     overflow: hidden;
@@ -49,24 +44,28 @@ $pad-lg: 2rem 4rem 4rem;
 
     h2 {
       @include mq(phones) {
-        font-size: 1.25rem;
+        font-size: 1rem;
         letter-spacing: 0.01rem;
       }
       @include mq(phonel) {
-        font-size: 1.75rem;
+        font-size: 1.25rem;
         letter-spacing: 0.02rem;
       }
       @include mq(tabletp) {
-        font-size: 2.25rem;
+        font-size: 1.5rem;
         letter-spacing: 0.03rem;
       }
-      margin: 1.5rem auto;
+      margin: .5rem auto 0 auto;
       opacity: 0.9;
       color: $color-tertiary;
     }
   }
 
   .modal-body {
+    @include mq(phones) { padding: $pad-sm; }
+    @include mq(phonel) { padding: $pad-md; }
+    @include mq(tabletp) { padding: $pad-lg; }
+
     margin: 0 auto;
     overflow-y: auto;
     max-height: 90vh;

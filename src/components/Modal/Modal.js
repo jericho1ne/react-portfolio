@@ -18,11 +18,11 @@ const Modal = ( props ) => {
           id={ props.id }
           onClick={ props.closeHandler }
         >Close</button>
-        <h2 className="card-title">{ props.title }</h2>
+        <h2 className="">{ props.title }</h2>
       </div>
       {/* Modal body */}
       <div className="modal-body">
-        <div class="subtitle">
+        <div className="subtitle">
           <ReactMarkdown source={ props.subtitle} />
         </div>
         <div className="description">

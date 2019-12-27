@@ -18,24 +18,29 @@
 
     &.slick-next,
     &.slick-prev {
-      top: 92%;
+      // top: 40%;
     }
     &.slick-prev{
-      left: 8%;
+      left: 0;
     }
     &.slick-next{
-      right: 8%;
-    }
-
-    &:hover {
-      transform: translateY(0) !important;
+      right: 0;
     }
   }
 
-  .slick-prev:before, .slick-next:before {
-    color: $color-secondary;
-    font-size: 1.5rem;
-    margin: 0;
+  .slick-prev,
+  .slick-next {
+    &:active {
+      transform: translateY(0.01em);
+    }
+    &:before {
+      color: $color-secondary;
+      font-size: 2.25rem;
+      margin: 0;
+      background: rgba(255,255,255, 0.9);
+      padding: .15rem;
+      border-radius: 45%;
+    }
   }
 
   .slick-dots {
@@ -53,6 +58,5 @@
         }
       }
     }
-
   }
 }
