@@ -2,9 +2,9 @@
 @import '../../sass/_colors';
 
 
-$pad-sm: 1rem .5rem;
-$pad-md: 2rem 1rem;
-$pad-lg: 4rem 4rem;
+$pad-sm: .5rem 1rem .5rem;
+$pad-md: 1rem 2rem 1rem;
+$pad-lg: 2rem 4rem 4rem;
 
 // Project modal expands to fill screen
 .modal-wrapper {
@@ -68,7 +68,7 @@ $pad-lg: 4rem 4rem;
 
   .modal-body {
     margin: 0 auto;
-    overflow-y: scroll;
+    overflow-y: auto;
     max-height: 90vh;
     padding-bottom: 2rem;
 
@@ -90,18 +90,6 @@ $pad-lg: 4rem 4rem;
       line-height: 1.5rem;
       color: $color-gray-mid;
     }
-  }
-
-  .card-details {
-    padding: 0;
-    margin: 0;
-    z-index: 101;
-    height: auto;
-    overflow-y: auto;
-    // overflow-x: hidden;
-    box-shadow: 0.25rem -0.25rem 1.5rem rgba(0, 0, 0, 0.35);
-
-
   }
 
   button {
