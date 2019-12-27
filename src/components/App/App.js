@@ -46,7 +46,7 @@ class App extends Component {
    */
   showProjectModal = (id) => {
     // Grab detailed info on the requested project (if needed)
-    const projDetails = this.state.projects.filter(item => item.id === id)[0]
+    const projDetails = this.state.projects.filter(item => (item.id === id))[0]
 
     // Determine whether to display the requested project.
     // Else, close the fullscreen modal.
@@ -54,7 +54,7 @@ class App extends Component {
       pFocus: projDetails,
       modalVisible: true
     }, () => {
-      console.log(this.state.pFocus)
+      // console.log(this.state.pFocus)
      })
   }
 
@@ -63,7 +63,7 @@ class App extends Component {
       pFocus: {},
       modalVisible: false,
     }, () => {
-      console.log(this.state.pFocus)
+      // console.log(this.state.pFocus)
     })
   }
 

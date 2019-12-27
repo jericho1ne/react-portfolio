@@ -16,11 +16,11 @@
   {
     "id": "twitter-demo",
     "thumb": "vue-node-twitter-demo.jpg",
-    "title": "Vue.js / Node Twitter Demo",
+    "title": "Twitter Demo (Vue/Node)",
     "subtitle": "Twitter demo using Firebase Hosting + Cloud Functions.",
     "tech": "Vue.js, Node, Twitter API, Firebase",
     "type": "web app",
-    "detail": "Technical demo incorporationg the twitter API and a Vue.js frontend. But keep in mind that __Machete Don't Tweet__!",
+    "detail": "Technical demo incorporationg the twitter API and a Vue.js frontend.",
     "media": {
       "link": "https://node-twitter.firebaseapp.com",
       "repo": "https://github.com/jericho1ne/vuejs-twitter"
@@ -33,7 +33,7 @@
     "type": "website",
     "subtitle": "SEO-focused hosting platform for small businesses.",
     "tech": "Jekyll, SnipCart, Google Cloud, Search Console",
-    "detail": "During our time at Low Tide Digital, we productized the most common services that small businesses need in order to quickly test their service or product. The result was an automated hosting platform that made use of a set of Jekyll website templates along with Google Search Console + Data Studio (for SEO reporting), Calendar, and Payment integration. Google Cloud + GitHub for automated deployments.",
+    "detail": "During our time at Low Tide Digital, we productized the most common services that small businesses need in order to quickly test their service or product. The result was an automated hosting platform that made use of a set of Jekyll website templates along with Google Search Console + Data Studio (for SEO reporting), and Strip + Snipcart for payment integration. Google Cloud + GitHub were used for automated deployments.",
     "thumb": "envue-seo-platform.jpg",
     "media": {
       "link": "http://envueplatform.com",
@@ -60,7 +60,7 @@
     "type": "website",
     "subtitle": "Color-coordinated flashcards representing architectural objects from various historic periods.",
     "tech": "jQuery, Bootstrap",
-    "detail": "Study guide used for a historical survey of global architecture class at USC. Check out the screencap in the [Vimeo app](https://vimeo.com/160999718) or watch it below.",
+    "detail": "Study guide used for a historical survey of global architecture class at USC. Check out the website screencapture in the [Vimeo app](https://vimeo.com/160999718) or watch it below.",
     "thumb": "architecture-flashcards.jpg",
     "media": {
       "embed": "<iframe src='https://player.vimeo.com/video/160999718?autoplay=1&loop=1&autopause=0' width='100%' height='auto'  frameborder='0' allow='autoplay; fullscreen' allowfullscreen></iframe>"

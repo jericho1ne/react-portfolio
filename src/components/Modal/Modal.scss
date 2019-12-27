@@ -1,11 +1,22 @@
 @import '../../sass/_mixins';
 @import '../../sass/_colors';
 
-$wrapper-padding: 4rem;
+
+$pad-sm: 1rem .5rem;
+$pad-md: 2rem 1rem;
+$pad-lg: 4rem 4rem;
 
 // Project modal expands to fill screen
 .modal-wrapper {
-
+  @include mq(phones) {
+    padding: $pad-sm;
+  }
+  @include mq(phonel) {
+    padding: $pad-md;
+  }
+  @include mq(tabletp) {
+    padding: $pad-lg;
+  }
 
   &.modal-show {
     display: block;
@@ -24,49 +35,59 @@ $wrapper-padding: 4rem;
   margin: 0;
   border: none;
   margin: 0;
-  width: 100%;
+  width: auto;
   height: 100vh;
   box-shadow: none;
 
   .modal-header {
     @include transition(opacity .85s ease-out);
     z-index: 101;
-    height: 15vh;
+    min-height: 10vh;
     overflow: hidden;
     background-color: #fff;
-    padding: $wrapper-padding;
+    padding-bottom: 1rem;
 
-    h1 {
-      width: 100vw;
-      margin: 0 auto;
-      font-size: 3rem;
+    h2 {
+      @include mq(phones) {
+        font-size: 1.25rem;
+        letter-spacing: 0.01rem;
+      }
+      @include mq(phonel) {
+        font-size: 1.75rem;
+        letter-spacing: 0.02rem;
+      }
+      @include mq(tabletp) {
+        font-size: 2.25rem;
+        letter-spacing: 0.03rem;
+      }
+      margin: 1.5rem auto;
       opacity: 0.9;
-      color: #fff;
-      letter-spacing: 0.07rem;
-      text-shadow: 0.15rem 0.15rem 0.2rem rgba(0, 0, 0, 0.9);
+      color: $color-tertiary;
     }
   }
 
   .modal-body {
     margin: 0 auto;
-    // text-align: center;
-    border: 2px solid red;
-    height: 85vh;
-    padding: $wrapper-padding;
+    overflow-y: scroll;
+    max-height: 90vh;
+    padding-bottom: 2rem;
 
-    h2 {
-      width: 100vw;
-      margin: 0 auto;
+    .subtitle {
       font-size: 2.0rem;
+      font-weight: 800;
       opacity: 0.9;
-      color: #fff;
+      background-color: lighten($color-tertiary, 20);
+      padding: 1rem 2rem;
       letter-spacing: 0.07rem;
-      text-shadow: 0.15rem 0.15rem 0.2rem rgba(0, 0, 0, 0.9);
+
+      p {
+        color: #fff;
+      }
     }
 
     p {
-      font-size: 1.25rem;
-      line-height: 2.25rem;
+      font-size: 1rem;
+      line-height: 1.5rem;
       color: $color-gray-mid;
     }
   }
@@ -76,23 +97,15 @@ $wrapper-padding: 4rem;
     margin: 0;
     z-index: 101;
     height: auto;
-    overflow-y: scroll;
+    overflow-y: auto;
     // overflow-x: hidden;
     box-shadow: 0.25rem -0.25rem 1.5rem rgba(0, 0, 0, 0.35);
 
-    @include mq(phones) {
-      padding: 0rem .25rem .8rem .25rem;
-    }
-    @include mq(phonel) {
-      padding: 0rem 1rem .8rem;
-    }
-    @include mq(tabletp) {
-      padding: 1.5rem 4rem .8rem;
-    }
+
   }
 
   button {
     background-color: darken($color-accent, 10);
-    margin: 5% 5%;
+    margin: .5rem;
   }
 }

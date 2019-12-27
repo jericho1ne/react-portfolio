@@ -50,7 +50,7 @@
 
 a {
   color: darken($color-primary, 10);
-  font-weight: 400;
+  font-weight: 600;
   @include transition(all 0.25s ease-out);
 
   &:visited {

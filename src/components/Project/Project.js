@@ -34,9 +34,6 @@ const Project = ( props ) => {
 
 
       <h3 className="card-title">{ props.title }</h3>
-      {/* { !props.inFocus
-          ? <h3 className="card-title">{ props.title }</h3>
-          : '' } */}
 
       <div className="card-details">
         <div className="tech">{ tagsList }</div>

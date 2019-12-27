@@ -13,27 +13,22 @@ const Modal = ( props ) => {
       style={{ opacity: props.opacity }} >
 
       {/* Modal header */}
-      <div className="modal-header"
-        onClick={ props.clickHandler }
-      >
+      <div className="modal-header" onClick={ props.closeHandler } >
         <button className="center"
           id={ props.id }
-          onClick={ props.closeHandler }>Close</button>
+          onClick={ props.closeHandler }
+        >Close</button>
         <h2 className="card-title">{ props.title }</h2>
-        </div>
-
-      {/* <h3 className="card-title">{ props.title }</h3> */}
-      {/* { !props.inFocus
-          ? <h3 className="card-title">{ props.title }</h3>
-          : '' } */}
+      </div>
+      {/* Modal body */}
       <div className="modal-body">
-        <div className="card-subtitle">
+        <div class="subtitle">
           <ReactMarkdown source={ props.subtitle} />
         </div>
         <div className="description">
           <ReactMarkdown source={ props.detail } />
         </div>
-        {/* <Multimedia media={ props.media } /> */}
+        <Multimedia media={ props.media } />
       </div>
 
     </div>
