@@ -24,13 +24,13 @@
       height: 540px;
     }
     @include mq(tabletl) {
-      height: 720px;
+      height: 620px;
     }
     @include mq(laptop) {
-      height: 800px;
+      height: 680px;
     }
     @include mq(desktop) {
-      height: 900px;
+      height: 720px;
     }
   }
 

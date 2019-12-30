@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import Tag from '../Tag/Tag'
-import Multimedia from '../Multimedia/Multimedia'
 
 import './Project.scss'
 

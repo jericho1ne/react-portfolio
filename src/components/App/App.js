@@ -11,7 +11,7 @@ import './App.scss'
 
 // External data
 import projectData from '../../assets/projectData.json'
-import websiteData from '../../assets/websiteData.json'
+import introduction from '../../assets/introduction.json'
 
 // Build container of image assets
 const projectImages = require.context('../../assets/projects', true)
@@ -138,9 +138,9 @@ class App extends Component {
       <div className="App">
         <Header
           isVisible={ this.state.header.isVisible }
-          links={ websiteData.header.links.slice(0, 3) }
-          title={ websiteData.header.title }
-          body={ websiteData.header.body }
+          links={ introduction.header.links.slice(0, 3) }
+          title={ introduction.header.title }
+          body={ introduction.header.body }
         />
         <content>
           <div className={`content-overlay ${(this.state.modalVisible ? 'show' : '' )}`}></div>

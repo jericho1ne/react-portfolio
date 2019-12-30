@@ -14,20 +14,6 @@
   },
 
   {
-    "id": "twitter-demo",
-    "thumb": "vue-node-twitter-demo.jpg",
-    "title": "Twitter Demo (Vue/Node)",
-    "subtitle": "Twitter demo using Firebase Hosting + Cloud Functions.",
-    "tech": "Vue.js, Node, Twitter API, Firebase",
-    "type": "web app",
-    "detail": "Technical demo incorporationg the twitter API and a Vue.js frontend.",
-    "media": {
-      "link": "https://node-twitter.firebaseapp.com",
-      "repo": "https://github.com/jericho1ne/vuejs-twitter"
-    }
-  },
-
-  {
     "id": "envue-platform",
     "title": "Envue Platform",
     "type": "website",
@@ -40,6 +26,24 @@
       "images": []
     }
   },
+
+  {
+    "id": "starterkit-media",
+    "title": "Starterkit Media",
+    "type": "website",
+    "subtitle": "Fast loading, responsive landing page for media production company.",
+    "tech": "Jekyll, HTML, Markdown, Liquid",
+    "detail": "Media-rich website for production company with offices in Los Angeles and Kauai. Website template allows for embedding of videos from YouTube and Vimeo, as well as music from SoundCloud, BandCamp and iTunes.",
+    "thumb": "starterkit-media.jpg",
+    "media": {
+      "images": [
+        "SKM-01.jpg",
+        "SKM-02.jpg"
+      ],
+      "video": []
+    }
+  },
+
   {
     "id": "find-some-coffee",
     "title": "Find Some Coffee",
@@ -51,6 +55,20 @@
     "media": {
       "link": "http://findsomecoffee.com/",
       "images": []
+    }
+  },
+
+  {
+    "id": "twitter-demo",
+    "thumb": "vue-node-twitter-demo.jpg",
+    "title": "Twitter Demo (Vue/Node)",
+    "subtitle": "Twitter demo using Firebase Hosting + Cloud Functions.",
+    "tech": "Vue.js, Node, Twitter API, Firebase",
+    "type": "web app",
+    "detail": "Technical demo incorporationg the twitter API and a Vue.js frontend.",
+    "media": {
+      "link": "https://node-twitter.firebaseapp.com",
+      "repo": "https://github.com/jericho1ne/vuejs-twitter"
     }
   },
 
@@ -110,20 +128,6 @@
         "waterbowl-04.jpg"
       ],
       "video": []
-    }
-  },
-
-  {
-    "id": "starterkit-media",
-    "title": "Starterkit Media",
-    "type": "website",
-    "subtitle": "Fast loading, responsive landing page for media production company.",
-    "tech": "Jekyll, HTML, Markdown, Liquid",
-    "detail": "Media-rich website for production company with offices in Los Angeles and Kauai. Website template allows for embedding of videos from YouTube and Vimeo, as well as music from SoundCloud, BandCamp and iTunes.",
-    "thumb": "starterkit-media.jpg",
-    "media": {
-      "link": "https://starterkitmedia.com/",
-      "images": []
     }
   },
 

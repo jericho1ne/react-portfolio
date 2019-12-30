@@ -11,7 +11,6 @@ const Modal = ( props ) => {
     <div
       className={`modal-wrapper ${(props.show ? 'modal-show' : 'modal-hide')}`}
       style={{ opacity: props.opacity }} >
-
       {/* Modal header */}
       <div className="modal-header" onClick={ props.closeHandler } >
         <h2 className="">{ props.title }</h2>
@@ -32,7 +31,6 @@ const Modal = ( props ) => {
         </div>
         <Multimedia media={ props.media } />
       </div>
-
     </div>
   )
 }
