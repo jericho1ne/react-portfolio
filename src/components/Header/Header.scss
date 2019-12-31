@@ -11,16 +11,36 @@ header {
   justify-content: center;
   color: white;
 
+  .cover-heading {
+    color: #eee;
+    opacity: 0.8;
+    padding: 0;
+
+    h2, h3, h4 {
+      @include mq(phones) { margin: .25rem 0; }
+      @include mq(phonel) { margin: .5rem 0; }
+      @include mq(tabletp) { margin: 1rem 0; }
+    }
+
+    text-shadow: 0.05rem 0.05rem 0.15rem rgba(0, 0, 0, 0.75);
+  }
+  .subtitle {
+    color: #fff;
+  }
+
   button,
   a.button {
     background-color: transparent;
     border-color: #fff;
     text-decoration: none;
-    padding: .4rem .6rem;
     margin: 0.2rem;
+
+    @include mq(phones) { padding: .2rem .4rem; }
+    @include mq(phonel) { padding: .3rem .6rem; }
+    @include mq(tabletp) { padding: .4rem .8rem; }
   }
   .header__links {
-    padding: 1rem 0;
+    padding: .5rem 0;
     display: flex;
     flex-wrap: wrap;
     align-items: center;

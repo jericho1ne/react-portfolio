@@ -15,17 +15,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
-
-  .cover-heading {
-    color: #eee;
-    opacity: 0.8;
-    padding: 0;
-    margin: 0;
-    text-shadow: 0.05rem 0.05rem 0.15rem rgba(0, 0, 0, 0.75);
-  }
-  .subtitle {
-    color: #fff;
-  }
 }
 
 .content-overlay {
@@ -46,6 +35,10 @@
     top: 0;
     height: 100%;
   }
+}
+
+p {
+  margin: 1.25rem 0;
 }
 
 a {
