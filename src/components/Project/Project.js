@@ -21,7 +21,7 @@ const Project = ( props ) => {
   })
 
   return (
-    <div className={`project-card ${(props.inFocus ? 'project-focus' : '')}`}
+    <div className={`project-card ${props.inFocus ? 'project-focus' : ''}`}
       style={{ opacity: props.opacity }} >
 
       <div className="card-img-top" onClick={ props.openHandler }>

@@ -1,7 +1,7 @@
 // import React from 'react'
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
-import Tag from '../Tag/Tag'
+// import Tag from '../Tag/Tag'
 import Multimedia from '../Multimedia/Multimedia'
 
 import './Modal.scss'
@@ -26,10 +26,15 @@ const Modal = ( props ) => {
         <div className="subtitle">
           <ReactMarkdown source={ props.subtitle} />
         </div>
+        {/* Project Details */}
         <div className="description">
           <ReactMarkdown source={ props.detail } />
         </div>
-        <Multimedia media={ props.media } />
+        {/* Rich Media Component */}
+        <Multimedia
+          title={ props.title }
+          media={ props.media }
+        />
       </div>
     </div>
   )

@@ -22,8 +22,11 @@
     "detail": "During our time at Low Tide Digital, we productized the most common services that small businesses need in order to quickly test their service or product. The result was an automated hosting platform that made use of a set of Jekyll website templates along with Google Search Console + Data Studio (for SEO reporting), and Strip + Snipcart for payment integration. Google Cloud + GitHub were used for automated deployments.",
     "thumb": "envue-seo-platform.jpg",
     "media": {
-      "link": "http://envueplatform.com",
-      "images": []
+      "link": "https://envueplatform.com",
+      "images": [
+        "Envue-01.jpg",
+        "Envue-02.jpg"
+      ]
     }
   },
 
@@ -36,6 +39,7 @@
     "detail": "Media-rich website for production company with offices in Los Angeles and Kauai. Website template allows for embedding of videos from YouTube and Vimeo, as well as music from SoundCloud, BandCamp and iTunes.",
     "thumb": "starterkit-media.jpg",
     "media": {
+      "link": "https://starterkitmedia.com",
       "images": [
         "SKM-01.jpg",
         "SKM-02.jpg"

@@ -8,6 +8,13 @@
   padding: 1rem auto;
   margin: 1rem 0;
 
+  &:hover {
+    opacity: 0.65;
+  }
+  &:active {
+    opacity: 0.25;
+  }
+
   iframe, .slider {
     background: #ddd;
     min-height: 480px;
@@ -35,8 +42,10 @@
   }
 
   img {
-    width: 100%;
+    width: 90%;
     height: auto;
+    border: 1px solid $color-gray-light;
+    margin: auto;
   }
 
   a.button { margin: 3rem 0 !important; }
