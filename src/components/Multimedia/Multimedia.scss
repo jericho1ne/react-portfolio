@@ -3,47 +3,37 @@
 
 .multimedia-container {
   height: auto;
-  min-height: 50vh;
   width: 100%;
   padding: 1rem auto;
   margin: 1rem 0;
-
-  &:hover {
-    opacity: 0.65;
-  }
 
   iframe, .slider {
     background: #ddd;
     min-height: 480px;
   }
 
-  iframe {
-    @include mq(phones) {
-      height: 320px;
-    }
-    @include mq(phonel) {
-      height: 360px;
-    }
-    @include mq(tabletp) {
-      height: 540px;
-    }
-    @include mq(tabletl) {
-      height: 620px;
-    }
-    @include mq(laptop) {
-      height: 680px;
-    }
-    @include mq(desktop) {
-      height: 720px;
-    }
+  iframe,
+  img {
+    @include mq(phones) { height: 320px; }
+    @include mq(phonel) { height: 360px; }
+    @include mq(tabletp) { height: 540px; }
+    @include mq(tabletl) { height: 620px; }
+    @include mq(laptop) { height: 680px; }
+    @include mq(desktop) { height: 720px; }
   }
 
   img {
-    width: 90%;
-    height: auto;
+    width: auto;
+    max-height: 720px;
     border: 1px solid $color-gray-light;
     margin: auto;
   }
 
-  a.button { margin: 3rem 0 !important; }
+  a.button {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    text-align: center;
+    max-width: 180px;
+  }
 }

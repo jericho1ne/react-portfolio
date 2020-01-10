@@ -28,10 +28,13 @@ const Multimedia = ( props ) => {
     if ('link' in props.media) {
       hasLink = true
       media_chunk =
-        <a href={`${props.media.link}`} target="_blank" rel="noopener noreferrer"
-          className="external__link"
-          alt={`View ${props.title} in a new window`}
-        >{media_chunk}</a>
+        <div>
+          <div className="center"><a className="button"
+            href={`${props.media.link}`} target="_blank" rel="noopener noreferrer"
+            alt={`View ${props.title} in a new window`}
+          >View Project</a></div>
+         {media_chunk}
+        </div>
     }
   }
 
