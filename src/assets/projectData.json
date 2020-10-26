@@ -71,7 +71,7 @@
     "type": "web app",
     "detail": "Technical demo incorporationg the twitter API and a Vue.js frontend.",
     "media": {
-      "link": "https://node-twitter.firebaseapp.com",
+      "link": "https://github.com/jericho1ne/vuejs-twitter",
       "repo": "https://github.com/jericho1ne/vuejs-twitter"
     }
   },
@@ -95,10 +95,10 @@
     "type": "dataviz",
     "subtitle": "Visualization showcasing global corruption schemes via money flows between FIFA officials and conspirators.",
     "tech": "Springy.js, jQuery, Photoshop, Google Sheets",
-    "detail": "This force graph visualization outlines 12 different schemes, as laid out by the FBI in 2015. The **Icons** represent each _Actor_ involved, **Colors** denote _Connection_ types, and **Line Type** defines actual vs planned _Payoffs_. Featured on USA Today's [Fields of Green](http://thefieldsofgreen.com/2015/06/19/fifa-infographic/). Collaborative project with [Rook Campbell, PhD](https://uscpublicdiplomacy.org/users/rook_campbell) - USC Center on Public Diplomacy.",
+    "detail": "This force graph visualization outlines 12 different schemes, as laid out by the FBI in 2015. The **Icons** represent each _Actor_ involved, **Colors** denote _Connection_ types, and **Line Type** defines actual vs planned _Payoffs_. Featured on USA Today's Fields of Green soccer blog. Collaborative project with [Rook Campbell, PhD](https://uscpublicdiplomacy.org/users/rook_campbell) - USC Center on Public Diplomacy.",
     "thumb": "fifa-gate.jpg",
     "media": {
-      "link": "http://mihaipeteu.com/media/projects/visualization-fifagate"
+      "link": "https://fifagate.com/"
     }
   },
 
