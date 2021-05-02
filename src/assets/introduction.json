@@ -5,14 +5,10 @@
 
     "links": [{
         "id": 0,
-        "title": "Resume",
-        "url": "http://mihaipeteu.com/media/mihai-peteu-resume.pdf"
-      },{
-        "id": 1,
         "title": "GitHub",
         "url": "https://github.com/jericho1ne"
       },{
-        "id": 2,
+        "id": 1,
         "title": "LinkedIn",
         "url": "http://www.linkedin.com/in/mihaipeteu/"
       }
