@@ -24,11 +24,11 @@ const Modal = ( props ) => {
       {/* Modal body */}
       <div className="modal-body">
         <div className="subtitle">
-          <ReactMarkdown source={ props.subtitle} />
+          <ReactMarkdown children={ props.subtitle} />
         </div>
         {/* Project Details */}
         <div className="description">
-          <ReactMarkdown source={ props.detail } />
+          <ReactMarkdown children={ props.detail } />
         </div>
         {/* Rich Media Component */}
         <Multimedia

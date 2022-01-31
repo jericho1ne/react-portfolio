@@ -36,7 +36,7 @@ const Project = ( props ) => {
 
       <div className="card-details">
         <div className="tech">{ tagsList }</div>
-        <div className="card-subtitle"><ReactMarkdown source={ props.subtitle} /></div>
+        <div className="card-subtitle"><ReactMarkdown children={ props.subtitle} /></div>
         <div className="float-bottom">
           <button onClick={ props.openHandler }>Details</button>
         </div>

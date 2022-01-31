@@ -142,7 +142,7 @@ class App extends Component {
           title={ introduction.header.title }
           body={ introduction.header.body }
         />
-        <content>
+        <div>
           <div className={`content-overlay ${(this.state.modalVisible ? 'show' : '' )}`}></div>
           <div className="project__cards">
             { projectList }
@@ -157,7 +157,7 @@ class App extends Component {
             media={ this.state.pFocus.media }
             closeHandler={ event => this.hideProjectModal() }
           />
-        </content>
+        </div>
         <Footer />
       </div>
     )

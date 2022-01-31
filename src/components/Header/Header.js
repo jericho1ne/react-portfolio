@@ -18,8 +18,8 @@ const Header = ( props ) => {
 
   // Create JSX fragment of wecome message
   const welcomeDiv = <React.Fragment>
-      <ReactMarkdown className="cover-heading" source={ props.title} />
-      <ReactMarkdown className="subtitle" source={ props.body} />
+      <ReactMarkdown className="cover-heading" children={ props.title} />
+      <ReactMarkdown className="subtitle" children={ props.body} />
     </React.Fragment>
 
   return (
