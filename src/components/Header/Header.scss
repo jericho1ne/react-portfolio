@@ -24,8 +24,13 @@ header {
 
     text-shadow: 0.05rem 0.05rem 0.15rem rgba(0, 0, 0, 0.75);
   }
-  .subtitle {
+  .subtitle p {
     color: #fff;
+    margin: 1rem auto;
+  }
+
+  .body p {
+    margin: 0 0 1.25rem auto;
   }
 
   button,

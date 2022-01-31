@@ -14,15 +14,30 @@
   },
 
   {
+    "id": "ccr-website",
+    "title": "Cultural Revolution Ceramics",
+    "type": "website",
+    "subtitle": "A digital exhibition of various artifacts from San Diego's Chinese Historical Museum",
+    "tech": "Webflow",
+    "detail": "Armed with a friend's pixel-perfect Figma mockup, I delved deeper into Webflow for this project. Created a custom visual theme using this WYSIWYG editor, and sprinkled in some custom Javsacript when necessary.",
+    "thumb": "ccr-website.jpg",
+    "media": {
+      "link": "https://www.culturalrevolutionceramics.com/"
+    }
+  },
+
+
+
+  {
     "id": "mhe-open-learning-ui-library",
     "thumb": "mhe-component-library.jpg",
-    "title": "Open Learning Theme Kit",
+    "title": "Open Learning Component Library",
     "subtitle": "McGraw Hill UI component library with implementation examples.",
     "tech": "GitHub Pages, npm, scss",
     "type": "video",
     "detail": "Visual Style Guide / UI Component Library that bridged the gap between UX and developer teams at McGraw Hill. A GitHub Pages-hosted demo page consumed SCSS styles and SVG assets from their respective npm packages.",
     "media": {
-      "embed": "<iframe width=\"90%\" height=\"480\" src=\"https://www.youtube.com/embed/D1YO4YxmCX0\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+      "embed": "<iframe width=\"90%\" height=\"480\" src=\"https://www.youtube.com/embed/D1YO4YxmCX0?&autoplay=1\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
       "link": "https://www.youtube.com/watch?v=D1YO4YxmCX0"
     }
   },
@@ -62,7 +77,7 @@
     "id": "fifa-gate",
     "title": "FIFA Gate Soccer Scandal",
     "type": "dataviz",
-    "subtitle": "Visualization showcasing global corruption schemes via money flows between FIFA officials and conspirators.",
+    "subtitle": "Visualization showcasing the 2015 global corruption scheme via money flows between FIFA officials and conspirators.",
     "tech": "Springy.js, jQuery, Photoshop, Google Sheets",
     "detail": "This force graph visualization outlines 12 different schemes, as laid out by the FBI in 2015. The **Icons** represent each _Actor_ involved, **Colors** denote _Connection_ types, and **Line Type** defines actual vs planned _Payoffs_. Featured on USA Today's Fields of Green soccer blog. Collaborative project with [Rook Campbell, PhD](https://uscpublicdiplomacy.org/users/rook_campbell) - USC Center on Public Diplomacy.",
     "thumb": "fifa-gate.jpg",

@@ -1,7 +1,8 @@
 {
   "header": {
     "title": "### Hello.",
-    "body": "I am a full stack developer, cyclist and coffee enthusiast.",
+    "subtitle": "I am a full stack developer, cyclist and coffee enthusiast. ",
+    "body": "The projects below were (mostly) completed during my free time.",
 
     "links": [{
         "id": 0,

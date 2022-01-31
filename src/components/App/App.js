@@ -140,6 +140,7 @@ class App extends Component {
           isVisible={ this.state.header.isVisible }
           links={ introduction.header.links.slice(0, 3) }
           title={ introduction.header.title }
+          subtitle={ introduction.header.subtitle }
           body={ introduction.header.body }
         />
         <div>
