@@ -87,6 +87,11 @@ $pad-lg: 1rem 4rem;
       }
     }
 
+    .description {
+      max-width: 640px;
+      margin: auto;
+    }
+
     p {
       font-size: 1rem;
       line-height: 1.5rem;

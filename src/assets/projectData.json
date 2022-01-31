@@ -1,4 +1,18 @@
 [
+
+  {
+    "id": "karmuh-app",
+    "title": "Karmuh Slack App",
+    "type": "website",
+    "subtitle": "Slack co-worker appreciation plugin",
+    "tech": "Jekyll, LottieFiles, Stripe, GCP",
+    "detail": "A fun side project where I assisted with front end duties and Lottie JSON (svg) animations and the creation of an app on the Slack app directory.",
+    "thumb": "karmuh-app.jpg",
+    "media": {
+      "link": "https://karmuh.app/"
+    }
+  },
+
   {
     "id": "mhe-open-learning-ui-library",
     "thumb": "mhe-component-library.jpg",
@@ -8,25 +22,8 @@
     "type": "video",
     "detail": "Visual Style Guide / UI Component Library that bridged the gap between UX and developer teams at McGraw Hill. A GitHub Pages-hosted demo page consumed SCSS styles and SVG assets from their respective npm packages.",
     "media": {
-      "embed": "<iframe src='https://player.vimeo.com/video/340378847?autoplay=1&loop=1&autopause=0' width='100%' height='auto' frameborder='0' allow='autoplay; fullscreen' allowfullscreen></iframe>",
-      "link": "https://vimeo.com/jericho1ne/open-learning-styleguide"
-    }
-  },
-
-  {
-    "id": "envue-platform",
-    "title": "Envue Platform",
-    "type": "website",
-    "subtitle": "SEO-focused hosting platform for small businesses.",
-    "tech": "Jekyll, SnipCart, Google Cloud, Search Console",
-    "detail": "During our time at Low Tide Digital, we productized the most common services that small businesses need in order to quickly test their service or product. The result was an automated hosting platform that made use of a set of Jekyll website templates along with Google Search Console + Data Studio (for SEO reporting), and Strip + Snipcart for payment integration. Google Cloud + GitHub were used for automated deployments.",
-    "thumb": "envue-seo-platform.jpg",
-    "media": {
-      "link": "https://envueplatform.com",
-      "images": [
-        "Envue-01.jpg",
-        "Envue-02.jpg"
-      ]
+      "embed": "<iframe width=\"90%\" height=\"480\" src=\"https://www.youtube.com/embed/D1YO4YxmCX0\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+      "link": "https://www.youtube.com/watch?v=D1YO4YxmCX0"
     }
   },
 
@@ -34,7 +31,7 @@
     "id": "starterkit-media",
     "title": "Starterkit Media",
     "type": "website",
-    "subtitle": "Fast loading, responsive landing page for media production company.",
+    "subtitle": "Responsive landing page for media production company.",
     "tech": "Jekyll, HTML, Markdown, Liquid",
     "detail": "Media-rich website for production company with offices in Los Angeles and Kauai. Website template allows for embedding of videos from YouTube and Vimeo, as well as music from SoundCloud, BandCamp and iTunes.",
     "thumb": "starterkit-media.jpg",
@@ -45,34 +42,6 @@
         "SKM-02.jpg"
       ],
       "video": []
-    }
-  },
-
-  {
-    "id": "find-some-coffee",
-    "title": "Find Some Coffee",
-    "type": "mobile",
-    "subtitle": "Find artisanal coffee nearby, see curated photos and reviews of Los Angeles coffee shops. Mobile app for [Android](https://play.google.com/store/apps/details?id=com.apps.fndsmcoffee) and [iOS](https://itunes.apple.com/us/app/find-some-coffee/id1316428363?mt=8).",
-    "tech": "Vue.js, node.js",
-    "detail": "Website, mobile app and blog. Follow the **Coffee Nearby** menu option to see the Vue.js web app in its full glory.",
-    "thumb": "find-some-coffee.jpg",
-    "media": {
-      "link": "http://findsomecoffee.com/",
-      "images": []
-    }
-  },
-
-  {
-    "id": "twitter-demo",
-    "thumb": "vue-node-twitter-demo.jpg",
-    "title": "Twitter Demo (Vue/Node)",
-    "subtitle": "Twitter demo using Firebase Hosting + Cloud Functions.",
-    "tech": "Vue.js, Node, Twitter API, Firebase",
-    "type": "web app",
-    "detail": "Technical demo incorporationg the twitter API and a Vue.js frontend.",
-    "media": {
-      "link": "https://github.com/jericho1ne/vuejs-twitter",
-      "repo": "https://github.com/jericho1ne/vuejs-twitter"
     }
   },
 
@@ -132,20 +101,6 @@
         "waterbowl-04.jpg"
       ],
       "video": []
-    }
-  },
-
-  {
-    "id": "law-office",
-    "title": "Law Offices of Gail Dulay",
-    "type": "website",
-    "subtitle": "Responsive framework website with a heavy SEO focus, relying on custom-built HTML templates.",
-    "tech": "HTML, CSS, Gulp",
-    "detail": "Mobile-friendly, SEO-focused website for service business.",
-    "thumb": "law-office.jpg",
-    "media": {
-      "link": "http://attorneydulay.com/",
-      "images": []
     }
   },
 
