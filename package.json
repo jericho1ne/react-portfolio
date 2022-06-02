@@ -36,6 +36,6 @@
     "eslint": "^8.8.0",
     "eslint-plugin-react-hooks": "^2.5.1",
     "install": "^0.13.0",
-    "npm": "^8.4.0"
+    "npm": "^8.11.0"
   }
 }
